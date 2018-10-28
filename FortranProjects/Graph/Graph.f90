@@ -5,7 +5,7 @@ program Graph
        
       call sine_graph 
   
-contains   
+contains    
     
  subroutine sine_graph  
  

@@ -3,7 +3,7 @@ import p2;
 
 print("Hello from main"); 
 
-p1.print_from_p1(); 
+p1.print_from_p1();  
 
-p2.print_from_p2(); 
+p2.print_from_p2();  
 
