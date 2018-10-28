@@ -1,0 +1,37 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.27703.2018
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "HelloWorld", "HelloWorld\HelloWorld.vcxproj", "{C5F80730-F44F-4478-BDAE-6634EFC2CA88}"
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Leds", "Leds\Leds.vcxitems", "{3CAD966D-B312-468E-862E-44C53A91032D}"
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Automation", "Automation\Automation.vcxproj", "{44D6E045-84E1-4F35-A1B0-81E00A442263}"
+EndProject
+Global
+	GlobalSection(SharedMSBuildProjectFiles) = preSolution
+		Leds\Leds.vcxitems*{3cad966d-b312-468e-862e-44c53a91032d}*SharedItemsImports = 9
+		Leds\Leds.vcxitems*{44d6e045-84e1-4f35-a1b0-81e00a442263}*SharedItemsImports = 4
+	EndGlobalSection
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|x86 = Debug|x86
+		Release|x86 = Release|x86
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{C5F80730-F44F-4478-BDAE-6634EFC2CA88}.Debug|x86.ActiveCfg = Debug|Win32
+		{C5F80730-F44F-4478-BDAE-6634EFC2CA88}.Debug|x86.Build.0 = Debug|Win32
+		{C5F80730-F44F-4478-BDAE-6634EFC2CA88}.Release|x86.ActiveCfg = Release|Win32
+		{C5F80730-F44F-4478-BDAE-6634EFC2CA88}.Release|x86.Build.0 = Release|Win32
+		{44D6E045-84E1-4F35-A1B0-81E00A442263}.Debug|x86.ActiveCfg = Debug|Win32
+		{44D6E045-84E1-4F35-A1B0-81E00A442263}.Debug|x86.Build.0 = Debug|Win32
+		{44D6E045-84E1-4F35-A1B0-81E00A442263}.Release|x86.ActiveCfg = Release|Win32
+		{44D6E045-84E1-4F35-A1B0-81E00A442263}.Release|x86.Build.0 = Release|Win32
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {E891F274-7547-4E7E-86F7-25F88EDCB603}
+	EndGlobalSection
+EndGlobal
