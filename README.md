@@ -11,6 +11,6 @@ Ed. Amazon
  
         Miguel Ángel Rapado Tamarit
         
-		    Belén Moreno Santamaría
-	       
-		    Juan Antonio Hernández Ramos
+	Belén Moreno Santamaría
+	
+	Juan Antonio Hernández Ramos
