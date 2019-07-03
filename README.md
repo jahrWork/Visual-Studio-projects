@@ -9,8 +9,8 @@ Ed. Amazon
  
  Authors: 
  
-        Miguel Ángel Rapado Tamarit
+ Miguel Ángel Rapado Tamarit
         
-	Belén Moreno Santamaría
+ Belén Moreno Santamaría
 	
-	Juan Antonio Hernández Ramos
+ Juan Antonio Hernández Ramos
