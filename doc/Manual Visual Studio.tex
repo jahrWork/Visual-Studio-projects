@@ -1,0 +1,227 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%        MANUAL VISUAL STUDIO         %%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% !TeX program = lualatex
+\documentclass[a4paper,11pt,twoside,english]{book}
+%\documentclass[a4paper,twoside,english]{book}
+
+
+\usepackage[
+paperwidth=16.99cm,
+paperheight=24.40cm,
+left=2.4cm,
+right=2cm,
+top=2.95cm,
+bottom=2.2cm,
+twoside
+]{geometry}
+
+
+\usepackage[width=16.99truecm,height=24.40truecm,center]{crop}
+%\usepackage[frame,width=16.99truecm,height=24.40truecm,center]{crop}
+%\usepackage[a4,frame,center]{crop}
+
+
+\usepackage{epic}
+\include{./format/packages}
+\include{./format/listings}
+\include{./format/luamacros}
+
+
+%\usepackage{parskip}
+%\setlength{\parskip}{1cm plus 4mm minus 3mm}
+%\setlength\parindent{18pt}
+
+
+
+\graphicspath{ {images/} }
+\newcommand{\folder}{./libraries}
+
+\usepackage{amsfonts}
+
+
+%LINEAS NUEVAS
+\newlength\myheight
+\newlength\mydepth
+\settototalheight\myheight{Xygp}
+\settodepth\mydepth{Xygp}
+\setlength\fboxsep{0pt}
+
+
+% Replace the title of the table of contents 
+\addto\captionsenglish{
+    \renewcommand{\contentsname}%
+    {Contents}% Here it goes the new title
+}
+
+
+%_______________________________________________________________________________
+\usepackage{titling} % Allows custom title configuration
+
+\bibliographystyle{abbrvnat}
+\addto\captionsenglish{\renewcommand{\bibname}{References}}		%It changes name of bibliography to References using natbib
+
+\definecolor{DarkGoldenrod}{rgb}{0.8,0.6,0.1}
+\definecolor{DarkRed}{rgb}{0.5,0.1,0.1}
+\definecolor{DarkRedPart}{rgb}{0.3,0.1,0.2}
+
+% Defines the gold horizontal rule around the title
+%\newcommand{\HorRule}{\color{DarkGoldenrod} \rule{\linewidth}{1pt}}
+
+\renewcommand*{\bibfont}{\footnotesize} %Makes the font of the bibliography a little bit smaller to adjust it to one page.
+
+% Horizontal rule before the title
+\pretitle{\vspace{-150pt} \begin{flushleft} \HorRule \fontsize{34}{34}
+		\usefont{OT1}{phv}{b}{n} \color{DarkRed} \selectfont}
+	% Your article title	
+	\title{{\fontsize{28}{34}\selectfont Programming with \\ \vspace{0.4cm} Visual Studio \\ \vspace{0.8cm} }  {\fontsize{28}{34}\selectfont Python, C++, Fortran\\ \vspace{0.4cm}WEB: HTML/CSS/JavaScript }}
+	
+	% Whitespace under the title	
+	\posttitle{\par\end{flushleft}\vskip 0.5em} 
+
+% Author font configuration
+\preauthor{	
+\begin{flushleft} 
+    \large \lineskip 0.5em \usefont{OT1}{phv}{b}{sl} \color{DarkRed}}	 	
+	\author{Miguel \'Angel Rapado Tamarit\\
+		    Bel\'en Moreno Santamar\'ia \\
+		    Juan Antonio Hern\'andez Ramos\\ 	
+            \vspace{5cm} } % Your name. En función de los nombres poner más espacio en el vspace o menos, para dejar la línea abajo del todo
+         
+        % Configuration for the institution name
+        \postauthor{\footnotesize \usefont{OT1}{phv}{m}{sl} \color{Black}
+        Department of Applied Mathematics \\
+        School of Aeronautical and Space Engineering \\
+        Technical University of Madrid (UPM)		
+	\par 
+\end{flushleft}
+\HorRule % Horizontal rule after the title
+}
+
+\date{  } % Add a date here if you would like one to appear underneath the title block
+
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%\pagestyle{empty}
+\begin{document}
+ 
+  
+%  \verb|pepito|
+  
+%  pepito 
+  
+% \end{document} 
+   
+    \maketitle
+    \thispagestyle{empty}   %Le quita el número de página y las líneas arriba y abajo a la parte de atrás de la portada. 
+    %\cleardoublepage       %Deja en blanco la página de detrás de la portada y no se numera
+    
+    %______________________________________________________________________________________________________
+    %Para la página de detrás de la portada, la hacemos a mano que es más sencillo y da menos problemas.  
+    
+    \noindent  Cover: 
+    
+    \noindent If you want something, go for it. Cover design Belén Moreno Santamaría
+   
+ 
+    \vfill  
+    \begin{minipage}[b]{0.9\textwidth}
+        This manual is aimed at the Aerospace Engineering students of the Technical University of Madrid who may start programming different languages with Microsoft Visual Studio. It is also for anyone interested in start using this complete tool from scratch. Additional content can be downloaded from \url{https://github.com/jahrWork}. The manual has been written with the idea of increasing all the information presented and improving the contents. Ideas for something to be added, deleted or changed would be kindly appreciated. In addition, corrections and feedback about anything that could be improved or better explained are welcomed. All contributions can be made in:
+        
+        \vspace*{2\baselineskip}
+        Miguel Ángel Rapado Tamarit \newline
+        \textcolor{Blue}{marapadotamarit@gmail.com}
+        \vspace*{3\baselineskip}
+        
+        %\footnotesize\raggedright
+        
+    \end{minipage}
+    
+    \noindent
+    All rights reserved.
+    No part of this publication may be reproduced or transmitted in any form or by any means, electronic or mechanical, including photocopy, recording, or any information storage and retrieval system, without permission in writing from the authors. 
+    \vspace{\baselineskip}
+   
+    \noindent\hspace{0.14cm} \ \ 2019 First Edition
+    
+    \noindent\hspace{0.14cm} \ \ 2020 Second Edition Revised and Expanded
+    
+    \noindent \copyright  \ \ 2021 Third Edition Updated
+    \vspace{\baselineskip}
+    
+    \hspace{0.7cm} Miguel Ángel Rapado Tamarit  
+       
+    \hspace{0.7cm} Belén Moreno Santamaría  
+             
+    \hspace{0.7cm} Juan Antonio Hernández Ramos
+    
+    \vspace{0.5cm}            
+    \noindent ISBN 978-1727581539 
+    %\noindent Depósito Legal: M-3036-2001
+    \clearpage
+    
+  
+    %______________________________________________________________________________________________________
+    \frontmatter
+    
+    \pagenumbering{roman}
+    
+    \parskip = \baselineskip %  plus 4mm minus 3mm}  
+    \input{Chapters/Preface.tex}
+    
+    \newpage
+    \setlength{\parskip}{0pt}
+    \tableofcontents
+    ~\clearpage
+
+
+    \pagenumbering{arabic}
+    
+    \parskip = \baselineskip
+    
+    %______________________________________________________________________________________________________
+    \mainmatter
+  
+  \newcommand\home{../solutions/fortran preliminaries/sources}
+  
+ %   \end{document} 
+    
+    \input{Chapters/Introduction.tex}
+    
+    \input{Chapters/Visual_studio.tex}
+   
+    \input{Chapters/Python_project.tex}
+   
+    \input{Chapters/Arduino_project.tex}
+    
+    \input{Chapters/Fortran_project.tex}
+    
+    \input{Chapters/WEB_project.tex} 
+ 
+  %  \input{Chapters/Software_development.tex}
+ 
+  %  \input{Chapters/Preliminaries.tex}
+   
+   
+ %   \input{Chapters/Advanced_programming_concepts.tex}
+
+    \input{Chapters/Git.tex}
+    
+   
+    
+    %______________________________________________________________________________________________________
+    \backmatter
+    
+    %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+    %%                              REFERENCES                               %%
+    %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+    %\nocite{*}          %Para que aparezcan todas las entradas de la bibliografía aunque no hayan sido mencionadas en el texto
+                        %Sin embargo, toda entrada de la bibliografía DEBE ser mencionada en el texto...Con \nocite{<key>} incluyo una concreta.
+  % \vspace{-2cm}                    
+    \bibliography{Chapters/References}
+    \addcontentsline{toc}{chapter}{References}
+    
+\end{document}

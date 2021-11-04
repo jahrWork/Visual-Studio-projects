@@ -1,0 +1,337 @@
+\chapter{Advanced programming concepts}
+
+ 
+ 
+ 
+
+ 
+ 
+  
+\section{Introduction} 
+One of the main characteristics to reuse code is generic programming.  
+Generic programming is based on abstract variable types that are then instantiated when they are used for specific variable type.
+
+Since Python or Javascript are non typed languages, generic programming in those languages is straightforward. However, in Fortran of C++
+special techniques are used. In fortran, the use of abstract  \lstinline{class(*)} allows to use different data types at run time. In C++, the use of templates solves this issue. 
+  
+  
+  
+  
+  %__________________________________________________________________________________________________
+ \section{Scope} 
+ One of the most important matters that we need to understand when we begin to write our own programming codes is the scope. In other words,  variables which are public and those which are private. This is called the scope of the visibility of some variable in some part of our code. 
+ 
+ In any programming language, the scope of variables, objects, functions or procedures is the set of statements in which the variable can be used or modified. The region of a program in which this variable or identifier is visible is called the scope. 
+ 
+ Hence, public and public variables or procedures are specified explicitly. If not, local and global variables are visible. Local variables are those which specified inside the function or subroutine that we are dealing with and global variables are those that can be accessed by common variables of my own module  or by inclusions of other modules.   
+ 
+ \newpage 
+ In the following code,  variables $x, y,z $ are visible inside the subroutine \texttt{Test}.  Variable $ z $ is a local variable, $ y $ is a global variable of module \texttt{modB} and $ x $ is a global variable of module \texttt{modA}.  All global variables of \texttt{modB} are seen in \texttt{Test}  by means of the  sentence \texttt{use modB}. Besides, since \texttt{modB} uses \texttt{modA}, all global variables of \texttt{modA} are seen in \texttt{modB}.   
+ \vspace{0.5cm} 
+ 
+ 
+ 
+ \newpage  
+ \subsection{Fortran}
+ 
+ \renewcommand{\home}{../solutions/advanced/Fortran_project/sources/scope} 
+ \listings{\home/modB.f90}{module modB}{end module}{modB.f90}
+ 
+ \listings{\home/modA.f90}{module modA}{end module}{modA.f90}
+ 
+ 
+ \newpage
+ \subsection{Python}
+ 
+ \newpage
+ \subsection{C++}
+ 
+ \newpage
+ \subsection{Javascript}
+ 
+ 
+ 
+ \newpage  
+  
+  
+  
+  
+  
+  
+  
+  
+\section{Overloading: operators and functions}
+
+ 
+\newpage  
+\subsection{Fortran}
+
+ \renewcommand{\home}{../solutions/advanced/Fortran_project/sources} 
+ \listings{\home/roots.f90}{subroutine roots_example}{end subroutine}{roots.f90}
+ 
+\newpage
+\subsection{Python}
+
+\renewcommand{\home}{../solutions/advanced/Python_project/sources} 
+\listings{\home/roots.py}{from}{x1=}{roots.py}
+
+
+\newpage
+\subsection{C++}
+\renewcommand{\home}{../solutions/advanced/C++_project/sources} 
+\listings{\home/roots.cpp}{include}{printf}{roots.cpp}
+
+\newpage
+\subsection{Javascript}
+\renewcommand{\home}{../solutions/advanced/Javascript_project/sources} 
+\listings{\home/roots.js}{use}{'x1 =}{roots.py}
+
+
+\section{Objects and Polymorphism} 
+
+
+\newpage 
+\subsection{Fortran} 
+
+\renewcommand{\home}{../solutions/advanced/Fortran_project/sources/polymorphism} 
+\listings{\home/polymorphism.f90}{subroutine polymorphism_example}{end subroutine}{polymorphism.f90}
+
+
+\newpage
+\subsection{Python}
+\renewcommand{\home}{../solutions/advanced/Python_project/sources} 
+\listings{\home/polymorphism.py}{class}{Figures Total}{polymorphism.py}
+
+
+
+\newpage
+\subsection{C++}
+\renewcommand{\home}{../solutions/advanced/C++_project/sources} 
+\listings{\home/polymorphism.cpp}{include}{virtual}{polymorphism.cpp}
+
+\newpage
+\listings{\home/polymorphism.cpp}{polymorphism}{Figures Total}{polymorphism.cpp}
+
+\newpage
+\subsection{Javascript}
+\renewcommand{\home}{../solutions/advanced/Javascript_project/sources} 
+\listings{\home/polymorphism.js}{use}{Figures Total}{polymorphism.js}
+
+\newpage 
+\listings{\home/polymorphism.js}{function Figure}{Figures Total}{polymorphism.js}
+
+
+\section{Pointers and targets} 
+
+\newpage 
+\subsection{Fortran}
+\renewcommand{\home}{../solutions/advanced/Fortran_project/sources} 
+\listings{\home/n_body_problem.f90}{subroutine test_pointers}{end subroutine}{n_body_problem.f90}
+
+\newpage 
+\listings{\home/n_body_problem.f90}{subroutine n_body_problem_simulator}
+{end subroutine}{n_body_problem.f90}
+
+\newpage
+\subsection{Python}
+\renewcommand{\home}{../solutions/advanced/Python_project/sources} 
+\listings{\home/n_body_problem.py}{def n_body_problem}{plt.show}{n_body_problem.py}
+
+
+\newpage
+\listings{\home/n_body_problem.py}{def Initial_positions_and_velocities}{-0.4}{n_body_problem.py}
+\listings{\home/n_body_problem.py}{def Velocity_and_acceleration}{] = a}{n_body_problem.py}
+
+\newpage
+\subsection{C++}
+
+
+
+\newpage
+\subsection{Javascript}
+
+
+
+\section{First class functions and lexical scoping} 
+Named parameters and default parameters 
+
+\subsection{Fortran} 
+
+\newpage 
+\listings{\home/First_class_functions.f90}{abstract interface}
+{end interface}{First_class_functions.f90}
+
+\newpage 
+\listings{\home/First_class_functions.f90}{subroutine Function_examples}
+{end subroutine}{First_class_functions.f90}
+
+\newpage 
+\listings{\home/First_class_functions.f90}{real function Integral}
+{end function}{First_class_functions.f90}
+
+\newpage 
+\listings{\home/First_class_functions.f90}{real function Moment}
+{end function}{First_class_functions.f90}
+
+\newpage
+\subsection{Python}
+
+\newpage
+\subsection{C++}
+
+\newpage
+\subsection{Javascript}
+
+
+
+\section{Vectorial operations}
+\subsection{Fortran}
+
+ \newpage 
+ \listings{\home/Fourier.f90}{Fourier_examples}
+ {end subroutine}{Fourier_series_examples.f90}
+
+
+
+\listings{\home/Fourier.f90}{elemental function Fourier_series}
+{end function}{Fourier_series_examples.f90}
+
+
+\newpage
+\subsection{Python}
+
+\newpage
+\subsection{C++}
+
+\newpage
+\subsection{Javascript}
+
+
+
+ 
+\newpage  
+\section{Map, filter and reduce} 
+
+\subsection{Fortran} 
+
+\renewcommand{\home}{../solutions/advanced/Fortran_project/sources} 
+
+\listings{\home/map_filter_reduce.f90}{subroutine test_map_filter_reduce}
+{end subroutine}{map_filter_reduce.f90}
+
+
+\renewcommand{\home}{../solutions/advanced/Fortran_project/sources} 
+\listings{\home/map_filter_reduce.f90}{elemental integer function str_to_number}
+{end function}{map_filter_reduce.f90}
+
+
+\newpage 
+\subsection{Python}
+
+\renewcommand{\home}{../solutions/advanced/Python_project/sources} 
+
+
+
+\listings{\home/map_filter_reduce.py}{def test_map_filter_reduce}
+{REDUCE}{map_filter_reduce.py}
+
+
+
+\listings{\home/map_filter_reduce.py}{def str_to_number}
+{return}{map_filter_reduce.py}
+
+
+
+
+\newpage
+\subsection{C++}
+
+
+\renewcommand{\home}{../solutions/advanced/C++_project/sources} 
+
+\listings{\home/map_filter_reduce.cpp}{void test_map_filter_reduce}
+{filtered}{map_filter_reduce.cpp}
+
+
+
+\listings{\home/map_filter_reduce.cpp}{int str_to_int}
+{int str_to_int}{map_filter_reduce.cpp}
+
+
+
+
+\newpage
+\subsection{Javascript} 
+
+\renewcommand{\home}{../solutions/advanced/Javascript_project/sources} 
+
+\listings{\home/map_filter_reduce.js}{test_map_filter_reduce}
+{REDUCE}{map_filter_reduce.js}
+ 
+ 
+
+ 
+ 
+ 
+
+\newpage 
+\section{Wrappers to reuse old codes} 
+\newpage
+\subsection{Fortran} 
+
+\renewcommand{\home}{../solutions/advanced/Fortran_project/sources/odes} 
+
+\listings{\home/Temporal_schemes.f90}{subroutine WDOPRI5}
+{end subroutine}{Temporal_schemes.f90}
+
+
+
+\newpage 
+\renewcommand{\home}{../solutions/advanced/Fortran_project/sources} 
+\listings{\home/Wrappers.f90}{subroutine Test_Arenstorf_orbit}
+{end subroutine}{Wrappers.f90}
+
+\newpage
+\subsection{Python}
+
+\newpage
+\subsection{C++}
+
+\newpage
+\subsection{Javascript}
+
+
+
+
+\newpage 
+\section{Fractals} 
+
+\newpage 
+\subsection{VonKoch} 
+
+\renewcommand{\home}{../solutions/advanced/Fortran_project/sources/fractals} 
+\listings{\home/VonKoch.f90}{subroutine VonKoch}
+{end subroutine}{VonKoch.f90}
+
+\newpage 
+\subsection{Mandelbrot} 
+\listings{\home/Mandelbrot.f90}{function Mandelbrot_set}
+{end function}{Mandelbrot.f90}
+
+
+\newpage 
+\section{Games} 
+
+\newpage 
+\subsection{Sudoku} 
+
+\renewcommand{\home}{../solutions/advanced/Fortran_project/sources/games} 
+\listings{\home/Sudoku.f90}{recursive subroutine}
+{end subroutine}{Sudoku.f90}
+
+
+
+
+
+
+ 

@@ -13,6 +13,27 @@ Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "HelloWorld", "ArduinoProjec
 EndProject
 Project("{6989167D-11E4-40FE-8C1A-2192A86A7E90}") = "MainFortranGraph", "FortranProjects\MainFortranGraph\MainFortranGraph.vfproj", "{894B3C1A-C1F5-4184-90C9-C94F4C67EC30}"
 EndProject
+Project("{E24C65DC-7377-472B-9ABA-BC803B73C61A}") = "myWebSite", "WebProjects\myWebSite\", "{A0148D1A-14E7-431F-A50B-13190998AF11}"
+	ProjectSection(WebsiteProperties) = preProject
+		TargetFrameworkMoniker = ".NETFramework,Version%3Dv4.6.1"
+		Debug.AspNetCompiler.VirtualPath = "/localhost_58090"
+		Debug.AspNetCompiler.PhysicalPath = "WebProjects\myWebSite\"
+		Debug.AspNetCompiler.TargetPath = "PrecompiledWeb\localhost_58090\"
+		Debug.AspNetCompiler.Updateable = "true"
+		Debug.AspNetCompiler.ForceOverwrite = "true"
+		Debug.AspNetCompiler.FixedNames = "false"
+		Debug.AspNetCompiler.Debug = "True"
+		Release.AspNetCompiler.VirtualPath = "/localhost_58090"
+		Release.AspNetCompiler.PhysicalPath = "WebProjects\myWebSite\"
+		Release.AspNetCompiler.TargetPath = "PrecompiledWeb\localhost_58090\"
+		Release.AspNetCompiler.Updateable = "true"
+		Release.AspNetCompiler.ForceOverwrite = "true"
+		Release.AspNetCompiler.FixedNames = "false"
+		Release.AspNetCompiler.Debug = "False"
+		VWDPort = "58090"
+		SlnRelativePath = "WebProjects\myWebSite\"
+	EndProjectSection
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -45,6 +66,14 @@ Global
 		{894B3C1A-C1F5-4184-90C9-C94F4C67EC30}.Release|Any CPU.ActiveCfg = Release|Win32
 		{894B3C1A-C1F5-4184-90C9-C94F4C67EC30}.Release|x86.ActiveCfg = Release|Win32
 		{894B3C1A-C1F5-4184-90C9-C94F4C67EC30}.Release|x86.Build.0 = Release|Win32
+		{A0148D1A-14E7-431F-A50B-13190998AF11}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A0148D1A-14E7-431F-A50B-13190998AF11}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A0148D1A-14E7-431F-A50B-13190998AF11}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{A0148D1A-14E7-431F-A50B-13190998AF11}.Debug|x86.Build.0 = Debug|Any CPU
+		{A0148D1A-14E7-431F-A50B-13190998AF11}.Release|Any CPU.ActiveCfg = Debug|Any CPU
+		{A0148D1A-14E7-431F-A50B-13190998AF11}.Release|Any CPU.Build.0 = Debug|Any CPU
+		{A0148D1A-14E7-431F-A50B-13190998AF11}.Release|x86.ActiveCfg = Debug|Any CPU
+		{A0148D1A-14E7-431F-A50B-13190998AF11}.Release|x86.Build.0 = Debug|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
