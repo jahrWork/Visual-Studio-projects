@@ -47,7 +47,7 @@
 \contentsline {section}{\numberline {6.8}Debugging a web page}{120}{section.0.6.8}% 
 \contentsline {section}{\numberline {6.9}Cordova project}{121}{section.0.6.9}% 
 \contentsline {chapter}{\numberline {7}Git and GitHub}{131}{chapter.0.7}% 
-\contentsline {section}{\numberline {7.1}VCS, Git and GitHub}{131}{section.0.7.1}% 
+\contentsline {section}{\numberline {7.1}Introduction}{131}{section.0.7.1}% 
 \contentsline {section}{\numberline {7.2}Installing...}{132}{section.0.7.2}% 
-\contentsline {section}{\numberline {7.3}Workflow in Git and GitHub}{133}{section.0.7.3}% 
+\contentsline {section}{\numberline {7.3}Workflow in Git and GitHub}{134}{section.0.7.3}% 
 \contentsline {chapter}{References}{135}{chapter*.93}% 
