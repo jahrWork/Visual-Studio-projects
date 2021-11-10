@@ -1,0 +1,76 @@
+\begin{thebibliography}{10}
+\providecommand{\natexlab}[1]{#1}
+\providecommand{\url}[1]{\texttt{#1}}
+\expandafter\ifx\csname urlstyle\endcsname\relax
+  \providecommand{\doi}[1]{doi: #1}\else
+  \providecommand{\doi}{doi: \begingroup \urlstyle{rm}\Url}\fi
+
+\bibitem[Conic-Jacob()]{f90}
+D.~Conic-Jacob.
+\newblock Fortran file extensions.
+\newblock \url{http://degenerateconic.com/fortran-file-extensions/}.
+\newblock [Online; accessed 27-April-2018].
+
+\bibitem[Intel Software Development Tools()]{manual}
+Intel Software Development Tools.
+\newblock \emph{Intel® Fortran Compiler User and Reference Guides-Document
+  Number: 304970-006US}.
+\newblock Intel.
+
+\bibitem[Lionel({\natexlab{a}})]{f902}
+S.~Lionel.
+\newblock Source form just wants to be free.
+\newblock
+  \url{https://software.intel.com/en-us/blogs/2013/01/11/doctor-fortran-in-source-form-just-wants-to-be-free},
+  {\natexlab{a}}.
+\newblock [Online; accessed 27-April-2018].
+
+\bibitem[Lionel({\natexlab{b}})]{mod2}
+S.~Lionel.
+\newblock Visual fortran newsletter articles.
+\newblock
+  \url{https://software.intel.com/en-us/forums/intel-visual-fortran-compiler-for-windows/topic/275071#comment-1548440},
+  {\natexlab{b}}.
+\newblock [Online; accessed 29-April-2018].
+
+\bibitem[Oracle()]{mod3}
+Oracle.
+\newblock Sun studio 12: Fortran user's guide-4.9 module files.
+\newblock \url{https://docs.oracle.com/cd/E19205-01/819-5263/aevog/index.html}.
+\newblock [Online; accessed 28-April-2018].
+
+\bibitem[Society()]{format2}
+B.~B.~C. Society.
+\newblock What are the differences between .mod, .obj, .lib, .exp, .exe, .dll
+  and .def?
+\newblock \url{http://www.fortran.bcs.org/2003/porting/part_3/slide_06.html}.
+\newblock [Online; accessed 27-April-2018].
+
+\bibitem[Wikipedia({\natexlab{a}})]{stack}
+Wikipedia.
+\newblock Stack overflow.
+\newblock \url{https://en.wikipedia.org/wiki/Stack_overflow}, {\natexlab{a}}.
+\newblock [Online; accessed 01-May-2018].
+
+\bibitem[Wikipedia({\natexlab{b}})]{stack2}
+Wikipedia.
+\newblock Call stack.
+\newblock \url{https://en.wikipedia.org/wiki/Call_stack}, {\natexlab{b}}.
+\newblock [Online; accessed 01-May-2018].
+
+\bibitem[Zone({\natexlab{a}})]{format}
+I.~D. Zone.
+\newblock Understanding files associated with intel® fortran applications
+  (windows*).
+\newblock \url{https://software.intel.com/en-us/node/680056}, {\natexlab{a}}.
+\newblock [Online; accessed 27-April-2018].
+
+\bibitem[Zone({\natexlab{b}})]{mod1}
+I.~D. Zone.
+\newblock Using module (.mod) files.
+\newblock
+  \url{https://software.intel.com/en-us/fortran-compiler-18.0-developer-guide-and-reference-using-module-mod-files},
+  {\natexlab{b}}.
+\newblock [Online; accessed 29-April-2018].
+
+\end{thebibliography}
