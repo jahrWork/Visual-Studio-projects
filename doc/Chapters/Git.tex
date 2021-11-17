@@ -72,9 +72,16 @@ In order to fully use GitHub integrated with all the projects mentioned before d
     
 \begin{figure}[h]
     \centering
-    \includegraphics[width = 1.2\textwidth]{Figures/GHStates.png}
+    \includegraphics[width = \textwidth]{Figures/GHStates.png}
     \caption{Git + GitHub workflow main states.}
     \label{fig:GitStates}
+\end{figure} 
+
+\begin{figure}[h]
+    \centering
+    \includegraphics[width = \textwidth]{Figures/WorkFlowGit.png}
+    \caption{Recommended Workflow when collaborating with GitHub.}
+    \label{fig:WorFlowGit}
 \end{figure} 
   
 \section{Create GitHUB repository from local project}
@@ -94,6 +101,20 @@ In order to fully use GitHub integrated with all the projects mentioned before d
     
 \end{itemize}
 
+
+Once you have the repository cloned in your local storage and you want to start working:
+
+\begin{enumerate}
+    \item Fetch and Pull the Master branch so you start with the most recent state of the project.
+    \item Create a new branch based on the main branch, name it according to the task you are going to perform.
+    \item Work on that branch, make commits, push those commits to store everything in GitHub and create issues to ask for help to your collaborators. 
+    Remember that the longer you work on a branch without merging with the master one, the more probable it will be for conflicts to appear when merging.
+    \item Once finished, if you have a final product that works, to merge in the master branch create a pull request with the latest changes.
+    \item Validate all the changes with your collaborators.
+    \item Merge the branch into the master branch.
+    \item Delete th branch (locally and remotely), this one does not have the changes made by the collaborators while you were working.
+    \item Fetch and Pull the Master branch in your local repository and start again. 
+\end{enumerate}
 
 
 
