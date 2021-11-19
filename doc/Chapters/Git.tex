@@ -4,36 +4,72 @@
 \chapter{Git and GitHub}
 
 
-    %------------------------------------------------------------------------------------------------------
-    \section{Introduction}
+%------------------------------------------------------------------------------------------------------
+\section{Introducing Git}
     
 Version Control Systems (VCS) are in charge of registering all the modifications made on a bunch of files, saving copies of the files, 
 recording what changes have been made, at what time, by who, etc. 
 The following actions can be carried out by a version control system such as Git: 
 
 \begin{enumerate}
+\setlength\itemsep{0.2cm}
     \item Old versions of the project can be recovered in the future.
     \item The evolution on the project can be tracked.
     \item It is easier to collaborate on the same project with a group of people.
     \item Incompatible or simultaneous changes in the same files can be managed by conflict resolution tools.
 \end{enumerate}
 
-The VCS Git is one of the most popular choices but not the only one, it is created for tracking changes in computer files and making it ideal for software development (individual and among groups). 
+Git is software  for tracking changes in computer files and making it ideal for software development (individual and among groups). 
 Once it is installed in the computer any project can be managed by Git, that project is then called repository.
-Since then, a \texttt{.git} hidden folder and some other files (i.e. the file \texttt{.gitignore}) appear in the repository.
-In order to use it the command \texttt{git} is available on the command line, also, some integrated tools are common on IDEs like Visual Studio.
 
-On the contrary, GitHub is a web-based hosting service made for Git where any registered user can publicly or privately post their repositories. 
-With GitHub or similar remote services the code is stored and is accessible from around the world, multiple people can develop the same project at the same time
-and it is fully integrated with Git.
+Once some project is tracked by Git, a \texttt{.git} hidden folder and some other files (i.e. the file \texttt{.gitignore}) appear in the 
+repository.
+The version control system can be used from the command prompt once \texttt{git} is installed. 
+Those \texttt{git} commands can be also be invoked from graphical interfaces such as: Visual Studio, 
+GitHub or GitHub Desktop. 
 
-This chapter explains how to install Git and GitHub tools on Visual Studio and summarizes the most basic commands in order to use Git properly in our projects. 
+It is important to distinguish between the local repository (your personal computer) and the remote
+repository such as GitHub.  
+GitHub is a provider of Internet hosting for software development and version control using Git.
+It is web-based hosting service that allows to store files in the cloud a private or public repository. 
+In the 
+
+The next sections will cover the creation of local and remote repositories as well as 
+procedures to work with collaborators or teams by developing software or modifying files. 
+
+  
+\
+ 
+ 
+ \section{Create a remote  GitHub repository}
+ First of all, a GitHub account must be created to store our remote repositories. 
+ Go to \texttt{github.com/join} and create a GitHub account associated to our email. 
+ \begin{enumerate}
+ \item {\bf From the GitHub web page.} Once our GitHub account has been created, login in the GitHub web page 
+ with our credentials and click \texttt{+} button close to your photo to create a repository. 
+ Follow the steps to create the basic files of the repository such as \texttt{.gitignore} file,  
+ and \texttt{readme} to start with. 
+   
+ \item {\bf From Visual Studio. } 
+ \item {\bf From GitHub Desktop. }
+  
+  \end{enumerate} 
 
 
 
+\section{Create a local repository}
 
-    %------------------------------------------------------------------------------------------------------
-    \section{Installing...}
+ \begin{enumerate}
+ \item {\bf  Clone a local repository from  GitHub.}
+ \item {\bf Create a local repository from Visual Studio. } 
+ \item {\bf Create a local repository from GitHub Desktop. } 
+ 
+ \end{enumerate} 
+
+
+
+%------------------------------------------------------------------------------------------------------
+\section{Creating a GitHub repository}
    
 The main characters in the VCS explained in this chapter are the following, consider which of them can be useful for your situation.  
 
@@ -64,9 +100,8 @@ In order to fully use GitHub integrated with all the projects mentioned before d
 %gitignore es LO PRIMERO QUE HAY QUE CREAR y readme creo que tambien
 
 
-
 \newpage 
-\section{Workflow in Git and GitHub}
+\section{Workflow and nomenclature in Git}
     
     
     
@@ -76,9 +111,59 @@ In order to fully use GitHub integrated with all the projects mentioned before d
     \caption{Git + GitHub workflow main states.}
     \label{fig:GitStates}
 \end{figure} 
-  
-\section{Create GitHUB repository from local project}
 
+
+Committing and pushing are how you can add the changes you made on your local machine to the remote repository in GitHub. That way your 
+instructor and/or teammates can see your latest work when you’re ready to share it. You can make a commit when you have made changes to your 
+project that you want to “checkpoint.” You can also add a helpful commit message to remind yourself or your teammates what work you did (e.g. 
+“Added a README with information about our project”).
+
+Once you have a commit or multiple commits that you’re ready to add to your repository, you can use the push command to add those changes to 
+your remote repository. Committing and pushing may feel new at first, but we promise you’ll get used to it 🙂
+
+
+
+\begin{itemize}
+\item COMMIT.
+ 
+\item PUSH
+\item PULL
+\item FETCH
+\item PULL REQUEST
+\item MERGE 
+\item REBASE
+\item FORKS
+\end{itemize} 
+
+
+
+
+
+\section{How to work with collaborators} 
+First of all, add collaborators to work with. 
+If you are owner of the repository, from your gitHub account,  
+go to \texttt{settings/manage access} to invite others to  collaborate in your project. 
+The following work flow applies both for the owner of the repository or for the collaborator.
+\begin{enumerate}
+    \item Create a branch based on the master branch. Identify that branch with a succint label describing the 
+    specific task or modification  to do.
+    \item Make changes on that branch. 
+    \item Commit those changes. 
+    \item Push to GitHub repository your changes. 
+    \item Pull request to merge your modifications with the master branch. 
+    \item Create the pull request and solve possible conflicts with the master branch. 
+    \item Merge the accepted changes with the master branch. 
+\end{enumerate}
+
+\section{How to work with the open source communityother persons} 
+\begin{enumerate}
+    \item Collaborators
+    \item 
+\end{enumerate}
+
+\section{Create issues}
+
+\section{GitHub classroom}
 
 
 
