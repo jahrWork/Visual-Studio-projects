@@ -11,7 +11,8 @@
     <OutputPath>.</OutputPath>
     <Name>MainPythonGraph</Name>
     <RootNamespace>MainPythonGraph</RootNamespace>
-    <InterpreterId>MSBuild|my_env|$(MSBuildProjectFullPath)</InterpreterId>
+    <InterpreterId>
+    </InterpreterId>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)' == 'Debug' ">
     <DebugSymbols>true</DebugSymbols>
@@ -23,17 +24,6 @@
   </PropertyGroup>
   <ItemGroup>
     <Compile Include="MainPythonGraph.py" />
-  </ItemGroup>
-  <ItemGroup>
-    <Interpreter Include="my_env\">
-      <Id>my_env</Id>
-      <Version>3.9</Version>
-      <Description>my_env (Python 3.9 (64-bit))</Description>
-      <InterpreterPath>Scripts\python.exe</InterpreterPath>
-      <WindowsInterpreterPath>Scripts\pythonw.exe</WindowsInterpreterPath>
-      <PathEnvironmentVariable>PYTHONPATH</PathEnvironmentVariable>
-      <Architecture>X64</Architecture>
-    </Interpreter>
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)\Python Tools\Microsoft.PythonTools.targets" />
   <!-- Uncomment the CoreCompile target to enable the Build command in
