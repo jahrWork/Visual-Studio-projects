@@ -151,33 +151,40 @@ Even if you are not invited to collaborate, you can create a fork of any reposit
 and to propose later a pull request.  
  
 \section{How to merge two branches}
-Finally, when you decide your task is finished, merge your branch with the master 
-branch. If you are working alone or 
-if you are working only in one specific task at a time, 
-you will never  encounter conflicts with trying to merge different branches.   
+When the developer decides his task is finished and ready to be shared, 
+he should merge his branch with the master branch. 
+If only one person is  working  or 
+if the developer is working only in one specific task at a time, 
+no conflicts are going to arise when trying to merge different branches.   
 However, if two collaborators are modifying the same file, conflicts should be resolved. 
-This process is shown graphically in figure \ref{fig:WorFlowGit}. 
+This process is shown graphically in figure \ref{fig:WorFlowGit} where two collaborators 
+are working on two different branches  or tasks.  
+As it was mentioned before, it is a good practice not to modify the master branch 
+and to create a specific branches with a succinct label describing the purpose of the task or 
+branch. The following steps represent the proposed methodology to work with collaborators:   
 \begin{enumerate} 
 \setlength\itemsep{0.0cm}
-\item Collaborators 1 and 2 create branches  1 and  2 
+\item Collaborators 1 and 2 create branches  $b_1$ and  $b_2$ 
 respectively based on the same master branch. 
-\item Imagine that collaborator 2, 
-finishes his task before collaborator 1 and merges his branch 2 with the master 
+\item Imagine that collaborator 2 
+finishes his task before collaborator 1 and merges his branch $b_2 $  with the master 
 branch. He will not find conflicts because no one has merged with the master branch after 
-he creates branch 2. 
-\item Imagine that collaborator 1 fisnishes his branch and tries to merge. 
+ branch $b_2$ was created. 
+\item Imagine that collaborator 1 finishes his branch and tries to merge. 
 If both collaborators are working on the same files, 
-collaborator 1 could find conflicts when trying to merge branch 1 with the master branch 
+collaborator 1 could find conflicts when trying to merge branch $b_1$ with the master branch 
 because at the time he tries to merge,  master branch is different from what 
-it was based on. 
-Hence, when working in teams possible conflicts could arise and should be resolved. 
+it was previously based on. 
+Hence, when working in teams possible conflicts could arise and they should be resolved. 
 \end{enumerate} 
  
-   
-There are two ways to merge two branches to finish some specific task, 
-to resolve conflicts if they appear and to delete old branches. 
-\begin{enumerate}
-\item {\bf Create a pull request}. From Visual Studio or from GitHub
+There are ways to merge and  to resolve possible conflicts of two different branches: {\it (i) } From GitHub and    
+ {\it (ii) } From Visual Studio.  
+%There are two ways to merge two branches to finish some specific task, 
+%to resolve conflicts if they appear and to delete old branches. 
+
+\section{Merging and resolving conflicts from GitHub} 
+ From  from GitHub or Visual Studio
 create a pull request to pull changes of some specific branch to be merged with the master branch. 
 From GitHub web page \texttt{create the pull request} and  \texttt{merge} accepted changes
 if no conflicts appear. 
@@ -185,79 +192,83 @@ If conflicts appear, GitHub allows to open with a web editor those files associa
 conflicts. By deleting manually those parts of files which are not accepted, 
 conflicts are resolved. Once this is done, \texttt{Mark as resolved} to accept changes
 by and \texttt{Commit merge}.
+The following steps  summarize the merging process, from GitHub, of  two branches with conflicts:
+ \begin{enumerate} 
+ \setlength\itemsep{0.0cm}
+ \item Create pull request 
+ \item Open the web editor and solve conflicts.  
+ \item Mark as resolved. 
+ \item Commit merge. 
+  \end{enumerate}  
+  
   
 
-\item {\bf Merge branches from Visual Studio}.
+\section{Merging and resolving conflicts from VS}
+
  Select \texttt{Git/Manage branches} and from the master branch,  merge  
  by clicking on the specific branch with the right button and choose
  \texttt{merge branch into master}.
-\end{enumerate} 
+ If conflicts appear click on \texttt{Resolve conflicts} and then look for Git changes 
+ where a list of files with changes with conflicts will appear.
+ Click right button on each file and select {\bf merge}. Three windows will appear showing 
+ the incoming modification file, the current master file and the desired result or merge file. 
+ By selecting different ticks or differences between 
+ the modification file and the master file, the result file is built. 
+ Once you agree with the result file, click on {\bf Accept merge} and commit the merge 
+ The following steps  summarize the resolving process when merging two branches with conflicts:
+ \begin{enumerate} 
+ \setlength\itemsep{0.0cm}
+ \item Select master branch. 
+ \item Select Gi/Manage branches. 
+ \item Click right button on the branch to merge and click on merge this branch 
+ into master branch. 
+ \item Click on Resolve conflicts (in blue).
+ \item Select Git changes to identify a list of files with conflicts. 
+ \item Click right button on the file presenting conflicts and select {\bf merge. }
+ \item Select differences or ticks between the two branches to merge and validate the result. 
+ \item Accept merge. 
+ \item Commit the merge result. 
+ \item Push to the remote repository. 
+ \end{enumerate}
 
-Once conflicts are resolved and some specific branch is merged with the master branch, it is advisable 
-to delete the local and the remote specific branch which was used to work in this task. 
+Once conflicts are resolved and some specific branch is merged with the master branch, 
+it is mandatory  to delete the local and the remote specific branch which was used to work in this task. 
 If a new modification is going to be carried out, 
 a new branch should be created based on the most recent update of the master branch. 
 
 \section{How to revert specific commits} 
-
- In the following sections we will deal with conflicts or how to revert specific changes
- once they are committed and pushed.
-
-\newpage 
-
-The following work flow applies both for the owner of the repository or for the collaborator.
+There are three different stages from which modifications or changes  can be reverted: 
 \begin{enumerate}
-\setlength\itemsep{0.0cm}
-    \item Create a branch based on the master branch. Identify that branch with a succint label describing the 
-    specific task or modification  to do.
-    \item Make changes on that branch. 
-    \item Commit those changes. 
-    \item Push to GitHub repository your changes. 
-    \item Pull request to merge your modifications with the master branch. 
-    \item Create the pull request and solve possible conflicts with the master branch. 
-    \item Merge the accepted changes with the master branch. 
+ \setlength\itemsep{0.0cm}
+\item Before changes are committed. 
+\item After changes are committed.
 \end{enumerate}
+If changes are not still committed, select \texttt{Git changes} a list of files that 
+have been modified is shown. 
+Click right button on the file we want to revert the change and select \texttt{Undo Changes}
+to revert to the last change or select \texttt{View History} to recover some 
+specific version of this file.  
+
+
+If changes are already committed, select   \texttt{Git/View Branch History}
+to inspect different commits of changes and proceed with the following steps: 
+\begin{enumerate}
+ \setlength\itemsep{0.0cm}
+\item Double click in any commit to revise the commit.
+\item Click Revert (in blue). 
+\item Select Git changes.  Click right button on the file and select {\bf merge}
+\item Select differences by observing the result. 
+\item Accept merge. 
+\item Commit the merge result. 
+\item Push to the remote repository. 
+\end{enumerate} 
+
 
 
 \section{Create issues}
 
 \section{GitHub classroom}
 
-\section{How to collaborate using Git + GitHub}
-
-
-\begin{itemize}
-\setlength\itemsep{0.0cm}
-    \item Leave the branch "main" for the final product that we could give to the students, must be compiling and working.
-    \item Each time someone starts a task creates a branch from GH or GH Desktop. Even if it is revising the text and correcting one comma. 
-    \item When the task is finished creates a Pull Request in Git Hub with explanation of the changes.
-    \item Manages the possible conflicts when it is pulled (together we can do this step is necessary).
-    \item After that, the branch is deleted in Git Hub.
-    \item And deleted from the local GH Desktop (not to confuse next time modifying something THAT HAS NOT THE MOST UPDATED branch main).
-    \item Finally someone deletes the .pdf in the main branch because it only has the information of the last pulled in the history, and specifically compiles and creates a new .pdf with all the state of the main branch, then the pdf is fully accordant to the main.
-    
-\end{itemize}
-
-
-Once you have the repository cloned in your local storage and you want to start working:
-
-\begin{enumerate}
-
-
-    \item Fetch and Pull the Master branch so you start with the most recent state of the project.
-    \item Create a new branch based on the main branch, name it according to the task you are going to perform.
-    
-    
-    
-    \item Work on that branch, make commits, push those commits to store everything in GitHub and create issues to ask for help to your 
-    collaborators. 
-    Remember that the longer you work on a branch without merging with the master one, the more probable it will be for conflicts to appear when merging.
-    \item Once finished, if you have a final product that works, to merge in the master branch create a pull request with the latest changes.
-    \item Validate all the changes with your collaborators.
-    \item Merge the branch into the master branch.
-    \item Delete th branch (locally and remotely), this one does not have the changes made by the collaborators while you were working.
-    \item Fetch and Pull the Master branch in your local repository and start again. 
-\end{enumerate}
 
 
 
@@ -275,69 +286,143 @@ Once you have the repository cloned in your local storage and you want to start 
 
 
 
-
-\section{Create GitHUB repository from local project}
-
-Committing and pushing are how you can add the changes you made on your local machine to the remote repository in GitHub. That way your 
-instructor and/or teammates can see your latest work when you’re ready to share it. You can make a commit when you have made changes to your 
-project that you want to “checkpoint.” You can also add a helpful commit message to remind yourself or your teammates what work you did (e.g. 
-“Added a README with information about our project”).
-
-Once you have a commit or multiple commits that you’re ready to add to your repository, you can use the push command to add those changes to 
-your remote repository. Committing and pushing may feel new at first, but we promise you’ll get used to it 🙂
-
-
-
-\begin{itemize}
-\item COMMIT.
- 
-\item PUSH
-\item PULL
-\item FETCH
-\item PULL REQUEST
-\item MERGE 
-\item REBASE
-\item FORKS
-\end{itemize} 
-
-
-
-
-
-
-%------------------------------------------------------------------------------------------------------
-\section{Creating a GitHub repository}
-   
-The main characters in the VCS explained in this chapter are the following, 
-consider which of them can be useful for your situation.  
-
-\begin{itemize}
-    \item Git 
-    \item GitHub account
-    \item GitHub Extension for Visual Studio, GitHub Desktop or both
-    \item GitHub Classroom account
-\end{itemize}
-   
-First of all, in order to use all the tools mentioned here, get sure that you already have a GitHub account, whether it is personal or with 
-your institutional email. If GitHub classroom is going to be used it is recommended the institutional email. 
-    
-To install Git an executable installer can be freely obtained from its main website: \underline{https://git-scm.com/}. Look for your 
-operating system and download the installer, then install it in your computer by following the steps. Another option is to install Git from 
-the Visual Studio installer; open and update it, go to Individual Components tab and find ``GIT for Windows'', select it and click on 
-``Modify''. Both ways install the tool for your computer, independently of using it with Visual Studio, a different IDE or the command prompt.
-
-Once finished, by opening a command line you should be able to execute a git command, for example type: \texttt{git help git} on your command 
-window, the Manual page should open in your browser. Now, git is available in your computer and it can be used in many different projects 
-like \LaTeX documents, Visual Studio solutions (\texttt{.sln}), MATLAB projects, etc. 
-
-In order to fully use GitHub integrated with all the projects mentioned before different options are available:
-
-\begin{enumerate}
-    \item If you are using Visual Studio install the GitHub extension in the IDE. Open EXTENSIONS and click on ``Manage Extensions'', open 
-    the tab ``Online'', look for the GitHub tool and install it. 
-    \item If your IDE does not have a GitHub integrated tool you can also manage it with GitHub Desktop, an application that brings and 
-    extents the potential of GitHub independently of the IDE used or the project being developed. 
-\end{enumerate}
+%
+%\section{How to collaborate using Git + GitHub}
+%
+%
+%\newpage 
+%
+%The following work flow applies both for the owner of the repository or for the collaborator.
+%\begin{enumerate}
+%\setlength\itemsep{0.0cm}
+%    \item Create a branch based on the master branch. Identify that branch with a succint label describing the 
+%    specific task or modification  to do.
+%    \item Make changes on that branch. 
+%    \item Commit those changes. 
+%    \item Push to GitHub repository your changes. 
+%    \item Pull request to merge your modifications with the master branch. 
+%    \item Create the pull request and solve possible conflicts with the master branch. 
+%    \item Merge the accepted changes with the master branch. 
+%\end{enumerate}
+%
+%
+%\begin{itemize}
+%\setlength\itemsep{0.0cm}
+%    \item Leave the branch "main" for the final product that we could give to the students, must be compiling and working.
+%    \item Each time someone starts a task creates a branch from GH or GH Desktop. Even if it is revising the text and correcting one comma. 
+%    \item When the task is finished creates a Pull Request in Git Hub with explanation of the changes.
+%    \item Manages the possible conflicts when it is pulled (together we can do this step is necessary).
+%    \item After that, the branch is deleted in Git Hub.
+%    \item And deleted from the local GH Desktop (not to confuse next time modifying something THAT HAS NOT THE MOST UPDATED branch main).
+%    \item Finally someone deletes the .pdf in the main branch because it only has the information of the last pulled in the history, and 
+%specifically compiles and creates a new .pdf with all the state of the main branch, then the pdf is fully accordant to the main.
+%    
+%\end{itemize}
+%
+%
+%Once you have the repository cloned in your local storage and you want to start working:
+%
+%\begin{enumerate}
+%
+%
+%    \item Fetch and Pull the Master branch so you start with the most recent state of the project.
+%    \item Create a new branch based on the main branch, name it according to the task you are going to perform.
+%    
+%    
+%    
+%    \item Work on that branch, make commits, push those commits to store everything in GitHub and create issues to ask for help to your 
+%    collaborators. 
+%    Remember that the longer you work on a branch without merging with the master one, the more probable it will be for conflicts to appear 
+%when merging.
+%    \item Once finished, if you have a final product that works, to merge in the master branch create a pull request with the latest changes.
+%    \item Validate all the changes with your collaborators.
+%    \item Merge the branch into the master branch.
+%    \item Delete th branch (locally and remotely), this one does not have the changes made by the collaborators while you were working.
+%    \item Fetch and Pull the Master branch in your local repository and start again. 
+%\end{enumerate}
+%
+%
+%
+%
+%
+%
+%
+%
+%
+%
+%
+%
+%
+%
+%
+%
+%
+%
+%\section{Create GitHUB repository from local project}
+%
+%Committing and pushing are how you can add the changes you made on your local machine to the remote repository in GitHub. That way your 
+%instructor and/or teammates can see your latest work when you’re ready to share it. You can make a commit when you have made changes to your 
+%project that you want to “checkpoint.” You can also add a helpful commit message to remind yourself or your teammates what work you did 
+%(e.g. 
+%“Added a README with information about our project”).
+%
+%Once you have a commit or multiple commits that you’re ready to add to your repository, you can use the push command to add those changes to 
+%your remote repository. Committing and pushing may feel new at first, but we promise you’ll get used to it 🙂
+%
+%
+%
+%\begin{itemize}
+%\item COMMIT.
+% 
+%\item PUSH
+%\item PULL
+%\item FETCH
+%\item PULL REQUEST
+%\item MERGE 
+%\item REBASE
+%\item FORKS
+%\end{itemize} 
+%
+%
+%
+%
+%
+%
+%%------------------------------------------------------------------------------------------------------
+%\section{Creating a GitHub repository}
+%   
+%The main characters in the VCS explained in this chapter are the following, 
+%consider which of them can be useful for your situation.  
+%
+%\begin{itemize}
+%    \item Git 
+%    \item GitHub account
+%    \item GitHub Extension for Visual Studio, GitHub Desktop or both
+%    \item GitHub Classroom account
+%\end{itemize}
+%   
+%First of all, in order to use all the tools mentioned here, get sure that you already have a GitHub account, whether it is personal or with 
+%your institutional email. If GitHub classroom is going to be used it is recommended the institutional email. 
+%    
+%To install Git an executable installer can be freely obtained from its main website: \underline{https://git-scm.com/}. Look for your 
+%operating system and download the installer, then install it in your computer by following the steps. Another option is to install Git from 
+%the Visual Studio installer; open and update it, go to Individual Components tab and find ``GIT for Windows'', select it and click on 
+%``Modify''. Both ways install the tool for your computer, independently of using it with Visual Studio, a different IDE or the command 
+%prompt.
+%
+%Once finished, by opening a command line you should be able to execute a git command, for example type: \texttt{git help git} on your 
+%command 
+%window, the Manual page should open in your browser. Now, git is available in your computer and it can be used in many different projects 
+%like \LaTeX documents, Visual Studio solutions (\texttt{.sln}), MATLAB projects, etc. 
+%
+%In order to fully use GitHub integrated with all the projects mentioned before different options are available:
+%
+%\begin{enumerate}
+%    \item If you are using Visual Studio install the GitHub extension in the IDE. Open EXTENSIONS and click on ``Manage Extensions'', open 
+%    the tab ``Online'', look for the GitHub tool and install it. 
+%    \item If your IDE does not have a GitHub integrated tool you can also manage it with GitHub Desktop, an application that brings and 
+%    extents the potential of GitHub independently of the IDE used or the project being developed. 
+%\end{enumerate}
 
 
 %Crear Git repository o clonar uno existente

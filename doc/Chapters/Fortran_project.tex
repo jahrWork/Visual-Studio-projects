@@ -420,33 +420,47 @@ Significant digits          15
     
 \textbf{DISLIN} is a plotting library for Fortran and C languages created by the Max Planck Institute (MPS). It is a high-level plotting library for displaying data and allows a quick plot of results when we are making a lot of tests with the code or debugging (graphic debugging) our program. It can be called from the main program or subroutines and ``contains routines and functions for displaying data as curves, bar graphs, pie charts, 3D-colour plots, surfaces, contours and maps''. In order to use DISLIN libraries in our project, we have to add some files first. Follow these steps: 
 
-\begin{enumerate}[nosep]
-    
+\begin{enumerate}
+     \setlength\itemsep{0.0cm}
     \item Download the DISLIN distribution package required for our machine. Open the web:
     
-    \url{http://www.mps.mpg.de/dislin/win-32-bit} 
+    \url{https://www.dislin.de/win64.html} 
     
     and choose Intel Fortran compiler package. 
     
     \item  Unzip the downloaded file and look for: 
     
-    \textit{disdll\_d.dll}, \textit{disdll\_d.lib}, \textit{disifc\_d.lib} and \textit{dislin\_d.f90}
+    \textit{disifl\_d.lib} and \textit{dislin\_d.f90}
      
     It is assumed that our calculations are done in double precision and that is why double precision files (\textit{*\_d.lib, dislin\_d.f90}) are selected. 
      
     \item Create a folder named DISLIN and locate those files on it. 
     
     \item Include this folder and all the items in our Visual Studio project following the process mentioned in section \ref{Including}.
+    \item Configure the project to avoid errors to platform x64 (all configurations).
     
-    \item Locate the file \textit{disdll\_d.dll} and copy it into the Release folder (or into the folder where the executable file of the program is located). If this file is not properly copied, an error will jump when trying to execute the program saying that cannot find this \textit{.dll} file. 
+        \texttt{Solution/properties/configuration} platfoprm x64 for . 
+    \item \texttt{Properties/Fortran/Data/Default real kind 8}. 
     
-    \item Configure the project to avoid errors (Figure \ref{fig:Config5}). Open the project property pages and check that in \textit{Fortran/Libraries/Runtime Library} is written ``Multithread DLL (/libs:dll /threads)''.
+    \item \texttt{Properties/Fortran/Libraries/} : Multithread.
+     
+    \item \texttt{Properties/Linker/Input/Additional/} : user32.lib, gdi32.lib. 
+        
+    \item Revise \texttt{IgnoreDefaultLibraryNames} :empty, none.  
     
-    \item Configure the project to avoid duplications. Open the project property pages in \textit{Linker/Input/Ignore Specific Library} and write in the space reserved: ``LIBCMT;libifcoremd''. A detailed image of the configuration process is shown in Figure \ref{fig:Config5}.
+\end{enumerate}     
     
-    \item Once the configuration process has been finished, the solution explorer looks like the example of Figure \ref{fig:dislin}. Remember that a complete dislin manual can be found in the dislin web page.  
+%    
+%     (Figure \ref{fig:Config5}). Open the project property pages and check that in \textit{Fortran/Libraries/Runtime Library} is written 
+%``Multithread DLL (/libs:dll /threads)''.
+%    
+%    \item Configure the project to avoid duplications. Open the project property pages in \textit{Linker/Input/Ignore Specific Library} and 
+%write in the space reserved: ``LIBCMT;libifcoremd''. A detailed image of the configuration process is shown in Figure \ref{fig:Config5}.
+%    
+%    \item Once the configuration process has been finished, the solution explorer looks like the example of Figure \ref{fig:dislin}. 
+%Remember that a complete dislin manual can be found in the dislin web page.  
  
-\end{enumerate} 
+
 
 Now our dislin example should work, take note of the subroutines used in the plotting example below in order to use it in future codes. The example allows to plot a sine graph in a very simple way. It is advisable to write a ``read(*,*)'' line at the end of the program to avoid that the command line gets closed after finishing. \vspace{0.5cm}
 
@@ -457,19 +471,20 @@ Now our dislin example should work, take note of the subroutines used in the plo
 \end{IN}
 
 
-\begin{figure}
-    \centering
-    \includegraphics[width= \linewidth ]{Figures/Config5}
-    \caption{Necessary configuration for the Project Properties in order to make the program work with DISLIN, the fields to change are \textit{Runtime Library} and \textit{Ignore Specific Library}.}
-    \label{fig:Config5}
-\end{figure}
-
-\begin{figure}
-    \centering
-    \includegraphics[width= \linewidth ]{Figures/dislin}
-    \caption{Solution explorer for the project Graph showing the inclusion of dislin libraries and \textit{dislin\_d.f90} interfaces.}
-    \label{fig:dislin}
-\end{figure}
+%\begin{figure}
+%    \centering
+%    \includegraphics[width= \linewidth ]{Figures/Config5}
+%    \caption{Necessary configuration for the Project Properties in order to make the program work with DISLIN, the fields to change are 
+%\textit{Runtime Library} and \textit{Ignore Specific Library}.}
+%    \label{fig:Config5}
+%\end{figure}
+%
+%\begin{figure}
+%    \centering
+%    \includegraphics[width= \linewidth ]{Figures/dislin}
+%    \caption{Solution explorer for the project Graph showing the inclusion of dislin libraries and \textit{dislin\_d.f90} interfaces.}
+%    \label{fig:dislin}
+%\end{figure}
 
 
 
