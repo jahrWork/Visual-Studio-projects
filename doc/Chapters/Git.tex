@@ -190,13 +190,13 @@ There are ways to merge and  to resolve possible conflicts of two different bran
 \section{Merging and resolving conflicts from GitHub} 
  From  from GitHub or Visual Studio
 create a pull request to pull changes of some specific branch to be merged with the master branch. 
-From GitHub web page \texttt{create the pull request} and  \texttt{merge} accepted changes
+Now, from GitHub web page \texttt{create the pull request} and \texttt{merge} accepted changes
 if no conflicts appear. 
 If conflicts appear, GitHub allows to open with a web editor those files associated with 
 conflicts. By deleting manually those parts of files which are not accepted, 
 conflicts are resolved. Once this is done, \texttt{Mark as resolved} to accept changes
-by and \texttt{Commit merge}.
-The following steps  summarize the merging process, from GitHub, of  two branches with conflicts:
+by a \texttt{Commit merge}.
+The following steps  summarize the merging process, from GitHub, of two branches with conflicts:
  \begin{enumerate} 
  \setlength\itemsep{0.0cm}
  \item Create pull request 
@@ -209,7 +209,7 @@ The following steps  summarize the merging process, from GitHub, of  two branche
 
 \section{Merging and resolving conflicts from VS}
 
- Select \texttt{Git/Manage branches} and from the master branch,  merge  
+ Select \texttt{Git/Manage branches} and from the master branch (it has to be active),  merge  
  by clicking on the specific branch with the right button and choose
  \texttt{merge branch into master}.
  If conflicts appear click on \texttt{Resolve conflicts} and then look for Git changes 
@@ -218,17 +218,17 @@ The following steps  summarize the merging process, from GitHub, of  two branche
  the incoming modification file, the current master file and the desired result or merge file. 
  By selecting different ticks or differences between 
  the modification file and the master file, the result file is built. 
- Once you agree with the result file, click on {\bf Accept merge} and commit the merge 
+ Once you agree with the result file, click on {\bf Accept merge} and commit the merge. 
  The following steps  summarize the resolving process when merging two branches with conflicts:
  \begin{enumerate} 
  \setlength\itemsep{0.0cm}
  \item Select master branch. 
- \item Select Gi/Manage branches. 
+ \item Select Git/Manage branches. 
  \item Click right button on the branch to merge and click on merge this branch 
  into master branch. 
  \item Click on Resolve conflicts (in blue).
  \item Select Git changes to identify a list of files with conflicts. 
- \item Click right button on the file presenting conflicts and select {\bf merge. }
+ \item Click right button on the file presenting conflicts and select {\bf merge }.
  \item Select differences or ticks between the two branches to merge and validate the result. 
  \item Accept merge. 
  \item Commit the merge result. 
@@ -247,7 +247,7 @@ There are three different stages from which modifications or changes  can be rev
 \item Before changes are committed. 
 \item After changes are committed.
 \end{enumerate}
-If changes are not still committed, select \texttt{Git changes} a list of files that 
+If changes are not still committed, select \texttt{Git changes} and a list of files that 
 have been modified is shown. 
 Click right button on the file we want to revert the change and select \texttt{Undo Changes}
 to revert to the last change or select \texttt{View History} to recover some 
@@ -260,7 +260,7 @@ to inspect different commits of changes and proceed with the following steps:
  \setlength\itemsep{0.0cm}
 \item Double click in any commit to revise the commit.
 \item Click Revert (in blue). 
-\item Select Git changes.  Click right button on the file and select {\bf merge}
+\item Select Git changes.  Click right button on the file and select {\bf merge}.
 \item Select differences by observing the result. 
 \item Accept merge. 
 \item Commit the merge result. 
