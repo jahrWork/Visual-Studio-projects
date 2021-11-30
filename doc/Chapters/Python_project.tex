@@ -10,7 +10,7 @@ Visual Studio supports Python projects and solutions by selecting during the Vis
 	\item Open \textit{Visual Studio Installer} application as an administrator.
 	%\item It may happen that the program requires an upgrade. Click on \textit{Update} and wait for the installation to finish.
 	\item Click on \textit{Modify} on the space reserved for your currently version of Visual Studio (Figure \ref{fig:vsi:list}). %If the \textit{Update} button were to appear instead, click on \textit{Update} and wait for the installation to complete, the \textit{Modify} button should be now available.
-	\item Now, in the \textit{Workloads} tab, select \textit{Python Development}. Check that the first three elements of the optional modules to be installed are selected (\textit{Python 3 xx-bit (3.x.x)} included), it can be checked on the right part of the window as it is shown in the Figure \ref{fig:vsi:mods}.
+	\item Now, in the \textit{Workloads} tab, select \textit{Python Development}. Check that the first three elements of the optional modules to be installed are selected (\texttt{Python 3 xx-bit (3.x.x)} included), it can be checked on the right part of the window as it is shown in the Figure \ref{fig:vsi:mods}.
 	\item Click on \textit{Modify} and wait until the installation has finished.
 \end{enumerate} 
 
@@ -169,7 +169,7 @@ We will see during this guide that the process for creating a new project is sim
 
     \section{Execute the ``Hello World'' example}
 
-This first example ensures that the installation has finished correctly. Like in the rest of the programming languages, it writes a ``Hello World'' message on the console. In this case, there is not a template already written with this example so we will write it from scratch. Open the project created in the previous section, you will find a \textit{.py} file with the same name as the project, open it and write the following code: %\vskip \baselineskip
+This first example ensures that the installation has finished correctly. Like in the rest of the programming languages, it writes a ``Hello World'' message on the console. In this case, there is not a template already written with this example so we will write it from scratch. Open the project created in the previous section, you will find a \texttt{.py} file with the same name as the project, open it and write the following code: %\vskip \baselineskip
 
 \vspace{0.5cm} 
 \begin{lstlisting}
@@ -197,9 +197,9 @@ Python can download projects developed by other people and include them in our o
 	\item Open your Python Project.
 	\item If the Solution Explorer is not opened, click on \textit{View/Solution Explorer}.
 	\item Unfold the \textit{Python Environments} menu inside the directory of the specific project in the solution explorer.
-	\item Right click on \textit{Python x.x (xx-bit)} and select \textit{Install Python package...} (Figure \ref{fig:pkg0}).
+	\item Right click on \texttt{Python x.x (xx-bit)} and select \textit{Install Python package...} (Figure \ref{fig:pkg0}).
 	\item Type the \textit{Package name} to be installed and press on \textit{Enter} (Figure \ref{fig:pkg1}).
-	\item A new window will ask you for \textbf{Administrator privileges} as shown on Figure \ref{fig:pkg15}. Select the third option: ``Always elevate when installing or removing packages'' and Visual Studio will grant permissions automatically.
+	\item A new window will ask you for \textbf{Administrator privileges} as shown on Figure \ref{fig:pkg15}. Select the third option: \textit{Always elevate when installing or removing packages} and Visual Studio will grant permissions automatically.
     \item The process of downloading and installing starts.
 	%\item On the \textit{Solution Explorer} tab on \textit{Solution 
 	%%%name/Python Environments/Python x.x (xx-bit)} menu and check if the 
@@ -223,7 +223,7 @@ Python can download projects developed by other people and include them in our o
 \begin{figure}[h]
 	\centering
 	\includegraphics[width=0.6 \textwidth]{Figures/PPM15.png}
-	\caption{Confirmation of the administrator privileges in order to install or remove packages. Click on ``Always elevate when installing or removing packages''.}
+	\caption{Confirmation of the administrator privileges in order to install or remove packages. Click on \textit{Always elevate when installing or removing packages}.}
 	\label{fig:pkg15}
 \end{figure}
 
