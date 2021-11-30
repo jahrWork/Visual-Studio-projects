@@ -39,28 +39,28 @@ procedures to work with collaborators and teams by developing software or modify
  \section{Create a remote  GitHub repository}
  
  First of all, a GitHub account must be created to store remote repositories. 
- Go to \texttt{github.com/join} and create a GitHub account associated to your email.
+ Go to \textit{github.com/join} and create a GitHub account associated to your email.
  There are different ways to create a remote repository depending on the graphical user 
  interface you use: 
    
  \begin{enumerate}
  \item {\bf From the GitHub web page.} Once our GitHub account has been created, login in the GitHub web page 
- with our credentials and click \texttt{+} button close to your photo to create a repository. 
+ with our credentials and click \textit{+} button close to your photo to create a repository. 
  Follow the steps to create the basic files of the repository such as \texttt{.gitignore} file,  
  and \texttt{README.md} file to start with. 
    
  \item {\bf From Visual Studio. } 
  Open some Visual Studio project that you are working with. 
-Click on \texttt{GIT/Create Git Repository}, 
+Click on \textit{GIT/Create Git Repository}, 
  select the GitHub account, choose the repository name and create and push.
 Browse through your  GitHub web page to see your new repository. 
  
  \item {\bf From GitHub Desktop. }
-  Open \texttt{GitHub Desktop} and sign in with your GitHub account 
-  (\texttt{File/Options/Accounts}).  
-  Create a new repository (\texttt{File/New repository}) by selecting its name, 
+  Open GitHub Desktop and sign in with your GitHub account 
+  (\textit{File/Options/Accounts}).  
+  Create a new repository (\textit{File/New repository}) by selecting its name, 
   a \texttt{REAMDE.md} file and a \texttt{.gitignore} template. 
-  Click on \texttt{Create repository} and then \texttt{Publish repository}.
+  Click on \textit{Create repository} and then \textit{Publish repository}.
   Browse through your GitHub web page to see your new repository.
   \end{enumerate} 
 
@@ -70,16 +70,16 @@ Browse through your  GitHub web page to see your new repository.
 
 There are three different ways to clone a remote repository 
 so a local repository is created. 
-Go to any GitHub public repository and from the green button  \texttt{Code}
+Go to any GitHub public repository and from the green button  \textit{Code}
 click on: 
  \begin{enumerate}
  \item {\bf  Open with GitHub Desktop.}
- This option opens the GitHubDesktop application and allows to select the  
+ This option opens the GitHub Desktop application and allows to select the  
  local path where this repository will be stored. 
   Click on \texttt{Clone} to create the local repository. 
  \item {\bf  Open with Visual Studio. } 
  This option opens Visual Studio and allows to select the local path where this repository 
-  will be stored. Click on \texttt{Clone} to create the local repository. 
+  will be stored. Click on \textit{Clone} to create the local repository. 
  \item {\bf Download zip. } 
  This option downloads a zip file that can be decompressed in any selected folder.
   
@@ -148,7 +148,7 @@ The following procedure should be carried out:
 
  \end{enumerate}
 If collaborators are going to work in some repository, the owner of the repository
-could invite people to collaborate  (\texttt{settings/manage access}).
+could invite people to collaborate  (\textit{settings/manage access}).
 Even if you are not invited to collaborate, you can create a fork of any public repository 
 and to propose later a pull request.  
  
@@ -190,12 +190,12 @@ There are ways to merge and  to resolve possible conflicts of two different bran
 \section{Merging and resolving conflicts from GitHub} 
  From  from GitHub or Visual Studio
 create a pull request to pull changes of some specific branch to be merged with the master branch. 
-Now, from GitHub web page \texttt{create the pull request} and \texttt{merge} accepted changes
+Now, from GitHub web page \textit{create the pull request} and \textit{merge} accepted changes
 if no conflicts appear. 
 If conflicts appear, GitHub allows to open with a web editor those files associated with 
 conflicts. By deleting manually those parts of files which are not accepted, 
-conflicts are resolved. Once this is done, \texttt{Mark as resolved} to accept changes
-by a \texttt{Commit merge}.
+conflicts are resolved. Once this is done, \textit{Mark as resolved} to accept changes
+by a \textit{Commit merge}.
 The following steps  summarize the merging process, from GitHub, of two branches with conflicts:
  \begin{enumerate} 
  \setlength\itemsep{0.0cm}
@@ -209,10 +209,10 @@ The following steps  summarize the merging process, from GitHub, of two branches
 
 \section{Merging and resolving conflicts from VS}
 
- Select \texttt{Git/Manage branches} and from the master branch (it has to be active),  merge  
+ Select \textit{Git/Manage branches} and from the master branch (it has to be active),  merge  
  by clicking on the specific branch with the right button and choose
- \texttt{merge branch into master}.
- If conflicts appear click on \texttt{Resolve conflicts} and then look for Git changes 
+ \textit{merge branch into master}.
+ If conflicts appear click on \textit{Resolve conflicts} and then look for Git changes 
  where a list of files with changes with conflicts will appear.
  Click right button on each file and select {\bf merge}. Three windows will appear showing 
  the incoming modification file, the current master file and the desired result or merge file. 
@@ -223,11 +223,11 @@ The following steps  summarize the merging process, from GitHub, of two branches
  \begin{enumerate} 
  \setlength\itemsep{0.0cm}
  \item Select master branch. 
- \item Select Git/Manage branches. 
- \item Click right button on the branch to merge and click on merge this branch 
- into master branch. 
- \item Click on Resolve conflicts (in blue).
- \item Select Git changes to identify a list of files with conflicts. 
+ \item Select \textit{Git/Manage branches}. 
+ \item Click right button on the branch to merge and click on \textit{Merge this branch 
+ into master branch}. 
+ \item Click on \textit{Resolve conflicts} (in blue).
+ \item Select \textit{Git changes} to identify a list of files with conflicts. 
  \item Click right button on the file presenting conflicts and select {\bf merge }.
  \item Select differences or ticks between the two branches to merge and validate the result. 
  \item Accept merge. 
@@ -247,20 +247,20 @@ There are three different stages from which modifications or changes  can be rev
 \item Before changes are committed. 
 \item After changes are committed.
 \end{enumerate}
-If changes are not still committed, select \texttt{Git changes} and a list of files that 
+If changes are not still committed, select \textit{Git changes} and a list of files that 
 have been modified is shown. 
-Click right button on the file we want to revert the change and select \texttt{Undo Changes}
-to revert to the last change or select \texttt{View History} to recover some 
+Click right button on the file we want to revert the change and select \textit{Undo Changes}
+to revert to the last change or select \textit{View History} to recover some 
 specific version of this file.  
 
 
-If changes are already committed, select   \texttt{Git/View Branch History}
+If changes are already committed, select   \textit{Git/View Branch History}
 to inspect different commits of changes and proceed with the following steps: 
 \begin{enumerate}
  \setlength\itemsep{0.0cm}
 \item Double click in any commit to revise the commit.
-\item Click Revert (in blue). 
-\item Select Git changes.  Click right button on the file and select {\bf merge}.
+\item Click \textit{Revert} (in blue). 
+\item Select \textit{Git changes}.  Click right button on the file and select {\bf merge}.
 \item Select differences by observing the result. 
 \item Accept merge. 
 \item Commit the merge result. 
