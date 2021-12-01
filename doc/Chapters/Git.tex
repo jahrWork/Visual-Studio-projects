@@ -274,33 +274,36 @@ to inspect different commits of changes and proceed with the following steps:
 \textit{Issues} are really useful for a bunch of common situations when collaborating within a team: ask for some help or give feedback to your collaborators, make a change request before closing a pull request through a merge or used them as an indicator of where the work is being developed. These \textit{issues} are retained as part of the timeline of the project so they can also be used to revise previous steps of the development. Furthermore, creating issues could be used as a planning for the future work, so the requirements of a branch can be captured in an \textit{issue} in such a way that it is closed when all the needs are covered and merged in the main branch. 
 
 By default \textit{issues} are enabled in the GitHub repository, however, the administrator could disable this option. 
-In case the team considers useful to use \textit{issues} as communication tool between the partners it can be interesting 
+In case the team considers useful to use them as a communication tool between the partners it can be interesting 
 to define a template ensuring that all basic information is covered when reporting problems, changes, etc.
 
 With the repository of GitHub opened (and already signed in with your GitHub account), to create an issue you can click on \textit{Issues} and click on the green box \textit{New issue}. 
-You can also launch the issue from GitHub Desktop by clicking on \textit{Repository/Create issue on GitHub}. Then, follow these steps:
+You can also launch the issue from GitHub Desktop by clicking on \textit{Repository/Create issue on GitHub}. 
+Then, follow these steps:
 
 \begin{enumerate}
 \setlength\itemsep{0.0cm}
-%\item Click on \textit{Issues}.
-%\item Click on the green box \textit{New issue}.
-\item Give a title and description to the issue, for example, which is the error found? How to reproduce it? What changes are needed?.
+\item Give a title and description to the issue, for example, which is the error found? How to reproduce it? What changes are needed?
 \item Define some extra information:
-    Which collaborators should be assigned to this issue to solve it? click on \textit{Assignees} on the right part of the window and select the people so they became responsible of the task to be performed. 
-    Define some labels associated to the issue in \textit{Labels} so the issues are classified and collaborators can filter them. 
-    Link the issue to a Pull request so it will be automatically closed when merge is definitely performed, to do that, click on \textit{Linked pull requests}.   
+    \begin{itemize}
+        \item Which collaborators should be assigned to this issue to solve it? Click on \textit{Assignees} on the right part of the window and select people so they became responsible of the task to be performed (they also receive an email notifying this issue).
+        \item Define some labels associated to the issue in \textit{Labels} so they are classified and collaborators can filter them. 
+        \item Link the issue to a Pull Request so it will be automatically closed when merge is definitely performed, to do that, click on \textit{Linked pull requests}.  
+        \item Add mentions to people through @Name so they receive an email notifying the mention. 
+        \item Create references to other issues with \# issueID.
+    \end{itemize}    
 \item Click on the green box \textit{Submit new issue} to create it.
+
+\item When the bug is fixed, the problem solved, the merged performed, etc. you can close the \textit{issue} by clicking on \textit{Close issue}. 
 \end{enumerate}
 
-From now on the issue appears in the repository for all the collaborators to check it, specially those declared as responsible of the task. 
-Once created, more comments can be attached by collaborators to discuss how to solve the problem, 
-different mentions to people could be included through \textit{@Name}, 
-also reference to other issues with \textit{\# issueID} and
-even \textit{milestones} could be added so the evolution of the task is tracked. 
+From now on the issue appears in the repository for all the collaborators to check it, 
+specially those declared as responsible of the task. 
+Once created, more comments can be attached by collaborators to discuss how to solve 
+the problem and even \textit{milestones} can be added so the evolution of the task is tracked. 
 
 It is responsibility of the team to maintain the issues updated with the evolution of the project. 
 For example, an issue should be closed if the task is finished or the problem solved. 
-Any issue can be closed at any time opening it and clicking on the box \textit{Close issue}. 
 
 
 
