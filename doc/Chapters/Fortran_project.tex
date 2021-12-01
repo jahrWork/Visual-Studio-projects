@@ -291,7 +291,7 @@ With the project opened and selected in the solution explorer we have to click o
         
         \item In addition, notice that a change in the properties of the project will change all internal files \textbf{except those properties of files that we have changed individually}. 
         
-        For example, if we mark \textbf{8 (/real\_size:64)} in \texttt{Fortran/Data/default Real KIND} in a \texttt{example.f90} file and we change the same option in the project configuration (let's say to \textbf{16 (/real\_size:128)}), all files are modified but \texttt{example.f90} does not. What's more, a red spot appears in the symbol of the file in the solution explorer notifying this condition. Furthermore, if the option does not have the compiler's default value, the value itself appears in bold in the configuration window.
+        For example, if we mark \textbf{\textit{8 (/real\_size:64)}} in \textit{Fortran/Data/default Real KIND} in a \texttt{example.f90} file and we change the same option in the project configuration (let's say to \textbf{\textit{16 (/real\_size:128)}}), all files are modified but \texttt{example.f90} does not. What's more, a red spot appears in the symbol of the file in the solution explorer notifying this condition. Furthermore, if the option does not have the compiler's default value, the value itself appears in bold in the configuration window.
     \end{itemize}
 \end{IN}
 
@@ -315,7 +315,7 @@ Now let's take a look at some important compiler options that can be found in th
 \begin{enumerate}
     
     %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%C
-    \item In \texttt{Fortran/Data/\textbf{Default Real KIND}} we can change the default value to ``8 (/real\_size:64)''. Then, when we write in our code 
+    \item In \textit{Fortran/Data/\textbf{Default Real KIND}} we can change the default value to ``8 (/real\_size:64)''. Then, when we write in our code 
     
     \textcolor{black}{\texttt{real :: x}}  
     
@@ -327,7 +327,7 @@ Now let's take a look at some important compiler options that can be found in th
     
     Using this compilation option, when we want to run our program with simple precision, we just have to change the value and the whole program will be executed with simple precision. The following example shows both ways of executing the same program and demonstrates that the results can be different depending on the compiler options. \label{Configuration1}
     
-    Execute the following code changing the \texttt{Default Real KIND} value in the compiler options, first with the value by default (simple precision) and then forcing the code to be executed in double precision. \vskip \baselineskip
+    Execute the following code changing the \textit{Default Real KIND} value in the compiler options, first with the value by default (simple precision) and then forcing the code to be executed in double precision. \vskip \baselineskip
     
     \lstinputlisting[language=Fortran, firstline=1, lastline=24]{Listing/ExManual2.f90}
 
@@ -365,7 +365,7 @@ Significant digits          15
     \begin{itemize}
 \item Notice how in both cases the \verb|x| is a simple precision real number since we are forcing the program to declare this variable as \verb|kind=4|. Then, the upper limit for this variable is around \texttt{E+38} as the \verb|huge(x)| function returns, the lower limit is around \texttt{E-38} according to \verb|tiny(x)| function and we can trust the first 6 significant digits of the number (\verb|epsilon(x)| calculates this value). 
 
-\item However, the behaviour of the \verb|y| is really different. In the declaration of the variable we have not specified the kind of the real variable. As said before, in the first execution (\texttt{Default Real KIND} 4), the compiler treats \verb|y| as simple precision and in the second execution (\texttt{Default Real Kind 8}) the variable is treated as double precision. Hence, the limits for \verb|y| in the second case are those related to double precision (\texttt{E+308}, \texttt{E+308} and 15 significant digits). In conclusion, the same code can return different results depending on the compilation options.
+\item However, the behaviour of the \verb|y| is really different. In the declaration of the variable we have not specified the kind of the real variable. As said before, in the first execution (\textit{Default Real KIND} 4), the compiler treats \verb|y| as simple precision and in the second execution (\textit{Default Real Kind 8}) the variable is treated as double precision. Hence, the limits for \verb|y| in the second case are those related to double precision (\texttt{E+308}, \texttt{E+308} and 15 significant digits). In conclusion, the same code can return different results depending on the compilation options.
     \end{itemize}
 \end{IN}   
     
@@ -374,10 +374,10 @@ Significant digits          15
     \item \textbf{Stack Overflow} can occur in our software for many reasons. It happens when the stack memory overflows and occupies other memory regions, then the stack pointer exceeds the stack bound \citep{stack} (concepts like call stack can be found in \citep{stack2}). Since the problem is to allocate more memory on the stack than the maximum that fits (too large local arrays or infinite recursion for example) one solution is to extend the size of the stack. We can change the configuration by clicking on \textit{Linker/Command Line/Additional Options:} and writing ``/STACK:100000000''.
     
     %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%C
-    \item \textbf{Heap allocation} is another method to avoid stack overflow in our programs. The heap is one of the three memories used by a Fortran application, it is dynamically allocated, bigger than the Stack in size but also slower. However, if your program needs from large automatic arrays (those whose size is defined by routine arguments) or makes arithmetic with large arrays (temporary arrays are normally stored in the stack) it can be a good idea to automatically store those arrays in the Heap, instead of stack. In order to do that click on \texttt{Fortran/Optimization/Heap Arrays} and write a value in kilobytes for the minimum temporary/automatic array size to be allocated in heap. If \texttt{0} is written, then all those arrays are affected. Notice that writing \texttt{/heap-arrays0} in \texttt{Fortran/Command Line/Additional Options} is another way to do the same. 
+    \item \textbf{Heap allocation} is another method to avoid stack overflow in our programs. The heap is one of the three memories used by a Fortran application, it is dynamically allocated, bigger than the Stack in size but also slower. However, if your program needs from large automatic arrays (those whose size is defined by routine arguments) or makes arithmetic with large arrays (temporary arrays are normally stored in the stack) it can be a good idea to automatically store those arrays in the Heap, instead of stack. In order to do that click on \textit{Fortran/Optimization/Heap Arrays} and write a value in kilobytes for the minimum temporary/automatic array size to be allocated in heap. If \texttt{0} is written, then all those arrays are affected. Notice that writing \textit{/heap-arrays0} in \textit{Fortran/Command Line/Additional Options} is another way to do the same. 
     
     %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%C
-    \item In \texttt{Fortran/Command Line/Additional Options:}, in order to enable \textbf{automatic reallocation}, write ``/assume:realloc\_lhs''. This option decides if using current Fortran Standard rules or old Fortran 2003 rules in relation to the automatic reallocation, which is described as:
+    \item In \textit{Fortran/Command Line/Additional Options:}, in order to enable \textbf{automatic reallocation}, write ``/assume:realloc\_lhs''. This option decides if using current Fortran Standard rules or old Fortran 2003 rules in relation to the automatic reallocation, which is described as:
     
     \begin{center}
         \begin{minipage}{0.7\linewidth}
@@ -395,19 +395,19 @@ Significant digits          15
 
 
     %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%C
-    \item In \texttt{Fortran/Run-time} the option \textbf{\texttt{Generate Traceback Information}} is by default deactivated. Set it as \texttt{Yes} so extra information will be placed in the object files and in the case of appearing a severe error in the run time, you will be capable of locate the source of error because source file, routine name and line number correlation will be displayed. This function is independent of the Debug option.
+    \item In \textit{Fortran/Run-time} the option \textbf{\textit{Generate Traceback Information}} is by default deactivated. Set it as \textit{Yes} so extra information will be placed in the object files and in the case of appearing a severe error in the run time, you will be capable of locate the source of error because source file, routine name and line number correlation will be displayed. This function is independent of the Debug option.
     
     %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%C
-    \item In the same section, \texttt{Fortran/Run-time}, fix the option \textbf{\texttt{Runtime Error Checking}} to \texttt{All} so the compiler checks at run time all the available conditions. These conditions are for example related to pointers (check if some allocatable objects are not allocated) or uninitialized variables. Some conditions in the code that could be ignored by the compiler, in this case are considered as Warnings and the compilation shows them. Then, it forces the programmer to make a clean code and take control of those inappropriate conditions. 
+    \item In the same section, \textit{Fortran/Run-time}, fix the option \textbf{\textit{Runtime Error Checking}} to \textit{All} so the compiler checks at run time all the available conditions. These conditions are for example related to pointers (check if some allocatable objects are not allocated) or uninitialized variables. Some conditions in the code that could be ignored by the compiler, in this case are considered as Warnings and the compilation shows them. Then, it forces the programmer to make a clean code and take control of those inappropriate conditions. 
     
     %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%C
-    \item In the section \texttt{Fortran/Diagnostics} activate \textbf{\texttt{Treat Warnings As Errors}}. This option changes some Warnings to Errors so the compilation will fail until they are solved. This function helps to maintain a clean code and avoids to accumulate bugs in a program. Even when those warnings could let the program be compiled, they can also be conceptual mistakes and they can become a problem if a lot of ignored warnings are accumulated in the projects.
+    \item In the section \textit{Fortran/Diagnostics} activate \textbf{\textit{Treat Warnings As Errors}}. This option changes some Warnings to Errors so the compilation will fail until they are solved. This function helps to maintain a clean code and avoids to accumulate bugs in a program. Even when those warnings could let the program be compiled, they can also be conceptual mistakes and they can become a problem if a lot of ignored warnings are accumulated in the projects.
     
     %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%C
-    \item In the same section, \texttt{Fortran/Diagnostics}, the option \textbf{\texttt{Warn For Non-standard Fortran}} makes the compiler to return warnings when there are language elements that are not contained in the Fortran standard. These standard warnings do not affect compilation but they help the programmer to modernize the programming style, ensure that other programmers understand the code, comply with common rules and avoid problems with different compilers. In our case, we want to be adapted to the Fortran 2008 standard so fix that value in the compilation option.
+    \item In the same section, \textit{Fortran/Diagnostics}, the option \textbf{\textit{Warn For Non-standard Fortran}} makes the compiler to return warnings when there are language elements that are not contained in the Fortran standard. These standard warnings do not affect compilation but they help the programmer to modernize the programming style, ensure that other programmers understand the code, comply with common rules and avoid problems with different compilers. In our case, we want to be adapted to the Fortran 2008 standard so fix that value in the compilation option.
     
     %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%C
-    \item Set the option \texttt{Fortran/Diagnostics/\textbf{Compile Time Diagnostics}} to \texttt{Show All} and the compiler will warn about a pile of interesting conditions to consider. For example, it will issue information about: variables declared in the code but not used after that, source code lines that exceed the maximum column width or statement functions that are never called in the program. 
+    \item Set the option \textit{Fortran/Diagnostics/\textbf{Compile Time Diagnostics}} to \textit{Show All} and the compiler will warn about a pile of interesting conditions to consider. For example, it will issue information about: variables declared in the code but not used after that, source code lines that exceed the maximum column width or statement functions that are never called in the program. 
 
 \end{enumerate}
 
@@ -437,16 +437,20 @@ Significant digits          15
     \item Create a folder named DISLIN and locate those files on it. 
     
     \item Include this folder and all the items in our Visual Studio project following the process mentioned in section \ref{Including}.
-    \item Configure the project to avoid errors to platform x64 (all configurations).
     
-        \texttt{Solution/properties/configuration} platfoprm x64 for . 
-    \item \texttt{Properties/Fortran/Data/Default real kind 8}. 
+    \item To avoid errors configure the project to: \textit{Platform: x64} and \textit{Configuration: All Configurations} by clicking with right button in your solution (in the solution explorer) and opening:
     
-    \item \texttt{Properties/Fortran/Libraries/} : Multithread.
-     
-    \item \texttt{Properties/Linker/Input/Additional/} : user32.lib, gdi32.lib. 
+        \textit{Properties/Configuration Properties}. 
         
-    \item Revise \texttt{IgnoreDefaultLibraryNames} :empty, none.  
+    \item Also, in the project properties: 
+    
+    \textit{Properties/Fortran/Data/Default real kind} to 8. 
+    
+    \item \textit{Properties/Fortran/Libraries/} : Multithreaded.
+     
+    \item \textit{Properties/Linker/Input/Additional Dependencies} : user32.lib, gdi32.lib. 
+        
+    \item Revise \textit{IgnoreDefaultLibraryNames} : empty, none.  
     
 \end{enumerate}     
     
@@ -504,7 +508,7 @@ In this section some general concepts and good practices are going to be explain
     %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%C
     \item \textbf{What are Release and Debug execution modes?} 
     
-    Release and Debug are two possible modes for executing our program, each of them has its own default configuration that allow us to build and run the code in a different way. We can create more modes with different configurations for the solution or for the project. For example, we could create one mode where the option \texttt{Default Real KIND} of Fortran compiler is 4 and other where it is 8. In the first one a variable declared as a real number will be considered of simple precision by default, in the second case it will be treated as a double precision real number. By changing between both modes, we would run the code with the two configurations. In order to define these modes we can access the Configuration Manager by clicking on \textit{Build/Configuration Manager} or by deploying the selector of Configuration (where the mode \textit{Release} or \textit{Debug} are shown). There we can create new modes or edit those we have. Once a mode is selected, the configuration can be modified in the properties page of the project (click with the right button in the name of the project and click on \textit{Properties}). 
+    Release and Debug are two possible modes for executing our program, each of them has its own default configuration that allow us to build and run the code in a different way. We can create more modes with different configurations for the solution or for the project. For example, we could create one mode where the option \textit{Default Real KIND} of Fortran compiler is 4 and other where it is 8. In the first one a variable declared as a real number will be considered of simple precision by default, in the second case it will be treated as a double precision real number. By changing between both modes, we would run the code with the two configurations. In order to define these modes we can access the Configuration Manager by clicking on \textit{Build/Configuration Manager} or by deploying the selector of Configuration (where the mode \textit{Release} or \textit{Debug} are shown). There we can create new modes or edit those we have. Once a mode is selected, the configuration can be modified in the properties page of the project (click with the right button in the name of the project and click on \textit{Properties}). 
    
     Regarding the Debug mode, it will allow you to run the code without turning on the optimiser. A lot of information will be included in the build files so we can check our program step by step, it can be useful for example for fixing bugs. However, if we are developing Numerical Simulations and related programs, we will use another kind of debugging: graphic assisted debugging. Checking errors in the code starts with the printing of results and the validation of the program module by module. That is why we typically include Dislin libraries in our program, to check results quickly and decide if we have programmed correctly our simulation, later we will save the numerical results in order to plot them with another tool. 
     

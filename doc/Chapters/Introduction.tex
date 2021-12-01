@@ -45,7 +45,7 @@ An important concept to handle is the difference between the \textbf{logical fil
 
 It is not the same for languages like Python or JavaScript. Once the project is started, if we create a folder or a code file using Visual Studio, the same folder or file is created in our hard drive in the same location where our project and solution are (both projects and solutions are explained later). In this case we do not have to take an strict control of files since the structure is repeated and consistent. 
 
-Let's think about a code file that we use in many different projects (stored in our desktop, outside our project folder, for example). If we are using Fortran, we can add that file to our project with no need of copying the file to the project folder. Different projects will have the path associated to the file and if we make a modification to the file, all the projects benefit from that update in the next compilation. Once again, this is different for languages like JavaScript. If we add the file to the project, a copy is automatically made in the project folder and a modification in the code stored in the desktop will be totally useless. If the file is used in 3 different projects, a modification in the code can become a mess. We strongly recommend to delete all files that has been previously copied to a project in order to avoid unnecessary duplications (there cannot be two files with the same name). If the code is going to be used in different projects we will build a library with that code (treated in each language) and include it in the different works.
+Let's think about a code file that we use in many different projects (stored in our desktop, outside our project folder, for example). If we are using Fortran, we can add that file to our project with no need of copying the file to the project folder. Different projects will have the path associated to the file and if we make a modification to the file, all the projects benefit from that update in the next compilation. Once again, this is different for languages like JavaScript. If we add the file to the project, a copy is automatically made in the project folder and a modification in the code stored in the desktop will be totally useless. If the file is used in 3 different projects, a modification in the code can become a mess. We strongly recommend to delete all files that has been previously copied to a project in order to avoid unnecessary duplications (there cannot be two files with the same name). If the code is going to be used in different projects we will build a library with that code (treated in each chapter) and include it in the different works.
 
 \begin{IN}
     For all these reasons, we are going to follow the same files/folders scheme in our projects from now on. Whether it is automatically created or not, we have to store all the source codes in a folder called ``sources'' inside our folder project (see Figure \ref{fig:FolderScheme}). If the folder is not created by default in both the real and the logical folder scheme, we have to do it manually. In addition, a list of files and folders are created together with the source files in order to make the project work properly. These additional elements depend on the programming language we are using and they would be treated in the specific chapter. As a practical implementation of this topic, take a look at the example \ref{sec:Example2}.
@@ -95,7 +95,9 @@ The solution and project files are XML files (Extensible Markup Language), this 
 
 All the configuration files mentioned are physically stored in our hard drive, in the folder reserved for the solution and the projects.
 
-
+Before continuing with some examples, a note on nomenclature: firstly, during the whole text \textbf{italics} are used to indicate a sequence of steps to follow in order to access some options, configurations, etc. in our computer. For example: click on \textit{File/New/Project...} in your IDE. 
+Secondly, \textbf{typewriter font} is used for files and folders names, commands to type in console, pieces of code, etc. For example: the file has \texttt{.f90} extension. 
+Finally, if some name should be written in a specific field, that name is written in \textbf{quotes}, for example: write ``Hello World'' as project name. 
 
 
 \FloatBarrier
@@ -105,7 +107,7 @@ In order to help the reader in the first steps with Visual Studio, a repository 
 
 \begin{figure}
     \centering
-    \includegraphics[width= \textwidth]{Figures/repository2}
+    \includegraphics[width= .92\textwidth]{Figures/repository2}
     \caption{jahrWork repository in GitHub created by Juan Antonio Hernandez Ramos.}
     \label{fig:repository}
 \end{figure}
@@ -124,6 +126,7 @@ Let's download, open and execute an example of this repository in order to get f
 \end{enumerate}
  
 
+\newpage
 \FloatBarrier
 \section{Example 2} \label{sec:Example2}
 
