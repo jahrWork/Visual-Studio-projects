@@ -38,11 +38,11 @@ In this section the basic tools for creating web projects with Visual Studio are
 \begin{figure}
     \centering
     \includegraphics[width= 0.9 \textwidth]{Figures/Projects/pro2}
-    \caption{''New Project'' window of Visual Studio with the project template selected, the name of both the project and the solution are already written.}
+    \caption{``New Project'' window of Visual Studio with the project template selected, the name of both the project and the solution are already written.}
     \label{fig:pro2}
 \end{figure}
 
-The project is created with the default files and folders (see Figure \ref{fig:pro3}) but we prefer to use the structure explained in this guide: \textit{index.html}, CSS folder, JS folder and images folder if needed:
+The project is created with the default files and folders (see Figure \ref{fig:pro3}) but we prefer to use the structure explained in this guide: \texttt{index.html}, CSS folder, JS folder and images folder if needed:
 
 \begin{enumerate}
     \item Firstly, click with the right button on the name of the project (in the Solution Explorer/myWebSite) and go to \textit{Add/Add New Item...}.
@@ -60,14 +60,14 @@ The project is created with the default files and folders (see Figure \ref{fig:p
 \begin{figure}
     \centering
     \includegraphics[width= \textwidth]{Figures/Projects/pro4a}
-    \caption{Adding \textit{index.html} to our website using the ``Add New Item'' window of Visual Studio.}
+    \caption{Adding \texttt{index.html} to our website using the \textit{Add New Item} window of Visual Studio.}
     \label{fig:pro4a}
 \end{figure}
 
 \begin{figure}
     \centering
     \includegraphics[width= 0.9 \textwidth]{Figures/Projects/pro4b}
-    \caption{Template of the \textit{index.html} file (created by default), here the website is going to be built.}
+    \caption{Template of the \texttt{index.html} file (created by default), here the website is going to be built.}
     \label{fig:pro4b}
 \end{figure}
 
@@ -88,23 +88,23 @@ Now we are going to create the desired folder structure, right click on the name
     \section{Execute the ``Hello world'' example} \label{sec:Web}
 
 %-----------------------------------------------------------------------------------------------------------------------------    
-Now we are going to ``write'' our website starting by a simple example. \textbf{In the first step}, we have to make our initial \textit{index.html} template looks like the Figure \ref{fig:pro6}. Do not forget to save the changes each time you make a modification in the webpage. 
+Now we are going to ``write'' our website starting by a simple example. \textbf{In the first step}, we have to make our initial \texttt{index.html} template looks like the Figure \ref{fig:pro6}. Do not forget to save the changes each time you make a modification in the webpage. 
 
 \begin{figure}
     \centering
     \includegraphics[width= 0.9 \textwidth]{Figures/Projects/pro6}
-    \caption{First example of website, the \textit{index.html} file has been modified.}
+    \caption{First example of website, the \texttt{index.html} file has been modified.}
     \label{fig:pro6}
 \end{figure}
 
-If we want to open our website we can go to the location of the project, open the folder ``myWebSite'' and double click on our \textit{index.html} file (or just drag it into our browser: Chrome or Firefox for example). However, we want to use Visual Studio for this project so we are going to Build and Start our website using the IDE. 
+If we want to open our website we can go to the location of the project, open the folder ``myWebSite'' and double click on our \texttt{index.html} file (or just drag it into our browser: Chrome or Firefox for example). However, we want to use Visual Studio for this project so we are going to Build and Start our website using the IDE. 
 
-The Figure \ref{fig:pro7} shows the toolbar ``Build'' where the Build and Start commands are. We have to click first on \textit{Build} and later in \textit{Start} and Visual Studio will automatically show the output. In addition, a Chrome window (or the default browser) will be opened with our result. If we do not have the mentioned toolbar shown in the environment (highly recommended) we can also click on \textit{BUILD/Build Web Site} and later on \textit{DEBUG/Start without Debugging}. The result of our webpage is shown in the Figure \ref{fig:pro8}.
+The Figure \ref{fig:pro7} shows the toolbar \textit{Build} where the Build and Start commands are. We have to click first on \textit{Build} and later in \textit{Start} and Visual Studio will automatically show the output. In addition, a Chrome window (or the default browser) will be opened with our result. If we do not have the mentioned toolbar shown in the environment (highly recommended) we can also click on \textit{BUILD/Build Web Site} and later on \textit{DEBUG/Start without Debugging}. The result of our webpage is shown in the Figure \ref{fig:pro8}.
 
 \begin{figure}
     \centering
     \includegraphics[width= 0.9 \textwidth]{Figures/Projects/pro7}
-    \caption{The window Output shows results of the execution. The ``Build'' toolbar appears remarked in the upper part of the IDE.}
+    \caption{The window Output shows results of the execution. The \textit{Build} toolbar appears remarked in the upper part of the IDE.}
     \label{fig:pro7}
 \end{figure}
 
@@ -119,17 +119,17 @@ The Figure \ref{fig:pro7} shows the toolbar ``Build'' where the Build and Start 
 \FloatBarrier
 \textbf{The next step is to include some style to the page}. It can be done in the main HTML file (including \textless style\textgreater...\textless\textbackslash style\textgreater ~ tags and defining inside properties) or using external style sheets, which is preferable. In order to include the mandatory reference to the external file, it is used the \textless link\textgreater ~  element in the head section.
 
-First of all, include the file in the project by clicking with the right button in the \textit{css} folder (in the Solution explorer) and going to \textit{Add/Add New Item...}. There, in \textit{Installed/Visual C\#}, select \textit{Style Sheet} and name it \textit{Style.css}. Finally, add the new sheet to the project. 
+First of all, include the file in the project by clicking with the right button in the \texttt{css} folder (in the Solution explorer) and going to \textit{Add/Add New Item...}. There, in \textit{Installed/Visual C\#}, select \textit{Style Sheet} and name it \texttt{Style.css}. Finally, add the new sheet to the project. 
 
-Now, include in the head of the html file the line seen in the Code \ref{lst:pro3}. While the ``rel'' attribute specifies the relation between the main document and the linked one, the ``type'' command is used to specify the media type of the external file. The ``href'' command at the end of the line defines the location and name of the file. \vskip \baselineskip 
+Now, include in the head of the html file the line seen in the Code \ref{lst:pro3}. While the \texttt{rel }attribute specifies the relation between the main document and the linked one, the \texttt{type} command is used to specify the media type of the external file. The \texttt{href} command at the end of the line defines the location and name of the file. \vskip \baselineskip 
 
 \begin{lstlisting}[language=HTML, caption={Line of code included in the HTML file in order to link the css style sheets.}, label={lst:pro3}]
 <link rel=''stylesheet'' type=''text/css'' href=''css/Style.css''
 \end{lstlisting}
 
-The code is now ready to accept some style in our dedicated file. In order to complete this basic example, we are going to change three things: the body background, the colour of the header in the text and the colour of the paragraphs. Open the sheet ``Style.css'' in Visual Studio and copy there the code seen in \ref{lst:pro4}. As can be checked, there are different colours to choose (you can even define them with the RGB code). In this example we are changing first the background colour, later the colour and alignment of the header (called h1, included in the HTML file) and finally the same parameters for the ``Hello world!'' paragraph. When finished, press on Build and later in Start, Visual will show the result. It should be like the Figure \ref{fig:css1} and the final webpage like the Figure \ref{fig:css2}. \vskip \baselineskip 
+The code is now ready to accept some style in our dedicated file. In order to complete this basic example, we are going to change three things: the body background, the colour of the header in the text and the colour of the paragraphs. Open the sheet \texttt{Style.css} in Visual Studio and copy there the code seen in \ref{lst:pro4}. As can be checked, there are different colours to choose (you can even define them with the RGB code). In this example we are changing first the background colour, later the colour and alignment of the header (called h1, included in the HTML file) and finally the same parameters for the ``Hello world!'' paragraph. When finished, press on Build and later in Start, Visual will show the result. It should be like the Figure \ref{fig:css1} and the final webpage like the Figure \ref{fig:css2}. \vskip \baselineskip 
 
-\begin{lstlisting}[language=HTML, caption={Code to include in the \textit{Style.css} created in the project in order to give style to the webpage.}, label={lst:pro4}]
+\begin{lstlisting}[language=HTML, caption={Code to include in the \texttt{Style.css} created in the project in order to give style to the webpage.}, label={lst:pro4}]
 body {
 background-color: lightblue;
 }
@@ -162,9 +162,9 @@ margin-left: 10px;
 %-----------------------------------------------------------------------------------------------------------------------------
 
 \FloatBarrier
-\textbf{The third step of this example} involves a similar process, now in order to include a JavaScript file in the project. Once again, the content is defined in a external file (it could also be written in the HTML with the tags \textless script\textgreater...\textless\textbackslash script\textgreater). Hence, include the file by clicking with the right button in the \textit{js} folder and going to \textit{Add/Add New Item...}. There, in \textit{Installed/Visual C\#} select \textit{JavaScript File} and name it \textit{JavaScript.js}, adding finally the file with \textit{Add} button.
+\textbf{The third step of this example} involves a similar process, now in order to include a JavaScript file in the project. Once again, the content is defined in a external file (it could also be written in the HTML with the tags \textless script\textgreater...\textless\textbackslash script\textgreater). Hence, include the file by clicking with the right button in the \texttt{js} folder and going to \textit{Add/Add New Item...}. There, in \textit{Installed/Visual C\#} select \textit{JavaScript File} and name it \texttt{JavaScript.js}, adding finally the file with \textit{Add} button.
 
-Include at the end of the body of the html file the line seen in the Code \ref{lst:pro5}. It makes use of the same tags but in this case the ``src'' attribute tells the browser where to find the script. External scripts are practical when the same code is used in many different web pages. Notice that the style is charged at the beginning of the html file in order to have the style orders defined before the content appears. For a similar reason, the modification of the contents (js file) is not uploaded until the content is already charged in the website, and that is why the code is located at the end of the body. \vskip \baselineskip 
+Include at the end of the body of the html file the line seen in the Code \ref{lst:pro5}. It makes use of the same tags but in this case the \texttt{src }attribute tells the browser where to find the script. External scripts are practical when the same code is used in many different web pages. Notice that the style is charged at the beginning of the html file in order to have the style orders defined before the content appears. For a similar reason, the modification of the contents (js file) is not uploaded until the content is already charged in the website, and that is why the code is located at the end of the body. \vskip \baselineskip 
 
 \begin{lstlisting}[language=HTML, caption={Line to include at the end of the HTML body in order to link the JavaScript file.}, label={lst:pro5}]
 <script src="js/JavaScript.js"></script>
@@ -172,7 +172,7 @@ Include at the end of the body of the html file the line seen in the Code \ref{l
 
 We have to write the JavaScript file and some elements to modify in the content of the webpage. In this example, we include a button with the text ``I'm a button'' written, and in the HTML file a function programmed for that button. At the same time, we include an identifier for the element to be modified when clicking in the button, let's say for example the paragraph ``Hello world!''. This identifier (HWid) is used to specify (in the function) the element that has to change. Hence, the HTML file should be changed to be like the seen in the Code \ref{lst:java1}. Notice how the button has the attribute type and the function (called in this case ``myFunction'') has the order to make when clicking (\textit{onclick}). \vskip \baselineskip
 
-\begin{lstlisting}[basicstyle=\small, language=HTML, caption={HTML file with a new button included, an identifier in the paragraph element and the link to the \textit{.js} file.}, label={lst:java1}]
+\begin{lstlisting}[basicstyle=\small, language=HTML, caption={HTML file with a new button included, an identifier in the paragraph element and the link to the \texttt{.js} file.}, label={lst:java1}]
 <!DOCTYPE html>
 <html>
 
@@ -198,7 +198,7 @@ We have to write the JavaScript file and some elements to modify in the content 
 
 
 \FloatBarrier
-\textbf{Finally}, open in Visual Studio the file ``JavaScript.js'' and copy there the code seen in \ref{lst:java2} in order to define the function. When finished, press on \textit{Build} and later in \textit{Start} and Visual will show the result. It should be like the Figure \ref{fig:js1} and the webpage, after pushing the button created, should be like the Figure \ref{fig:js2}. \vskip \baselineskip 
+\textbf{Finally}, open in Visual Studio the file \texttt{JavaScript.js} and copy there the code seen in \ref{lst:java2} in order to define the function. When finished, press on \textit{Build} and later in \textit{Start} and Visual will show the result. It should be like the Figure \ref{fig:js1} and the webpage, after pushing the button created, should be like the Figure \ref{fig:js2}. \vskip \baselineskip 
 
 \newpage
 \begin{lstlisting}[basicstyle=\small, language=HTML, caption={\textit{myFunction} code defined in the JavaScript file, it changes the text found with the identifier ``HWid''.}, label={lst:java2}]
@@ -229,7 +229,7 @@ document.getElementById("HWid").innerHTML="Hello Universe!"
 A website usually consists of many files: text content, code, style sheets, media content, etc. When building a website, it is necessary to assemble these files into structure on your local computer, make sure they can talk to one another, and get all the content looking right before it is uploaded to a server. A common distribution of folders and files (extracted from \url{https://developer.mozilla.org}) in a web project involves:
 
 \begin{enumerate}[nosep]
-    \item \textbf{index.html:} This file generally contains your homepage content (the text and images that people see when they first go to the site). Using your text editor, you can create a new file called \textit{index.html} and save it just inside your test-site folder.
+    \item \textbf{index.html:} This file generally contains your homepage content (the text and images that people see when they first go to the site). Using your text editor, you can create a new file called \texttt{index.html} and save it just inside your test-site folder.
     \item \textbf{images folder:} This folder contains all the images that you use on your site.
     \item \textbf{styles folder:} This folder contains the CSS code used to style the content (for example, setting text and background colours).
     \item \textbf{scripts folder:} This folder contains all the JavaScript code used to add interactive functionality to the site (e.g. buttons that load data when clicked).    
@@ -239,7 +239,7 @@ In conclusion, mainly three types of files contain the code necessary to create 
 
 HTML (Hypertext Markup Language) is a markup language, hence, the file is constructed using a series of elements (tags are used to create the elements) that define every instruction we want to apply to an specific piece of content. For example, the enclosing tags can make a word hyperlink to somewhere else, italicize words and more. There are tags for every function or behaviour we want to define.
 
-CSS and JS files are linked to the main HTML file using a file path so one file (main HTML file) knows where another one is. For example, the header of the \textit{index.html} contains different routes to the style files (CSS), in addition, the body of the main HTML file also contains routes to images, videos and rest of the material that the webpage has. 
+CSS and JS files are linked to the main HTML file using a file path so one file (main HTML file) knows where another one is. For example, the header of the \texttt{index.html} contains different routes to the style files (CSS), in addition, the body of the main HTML file also contains routes to images, videos and rest of the material that the webpage has. 
 
 CSS (Cascading Style Sheets) is the code used to provide style to the content referred in the HTML file, this means that here we are going to decide whether the words are black or red, the decoration around the images or the aspect of the different elements mentioned in the HTML file. CSS is a \textit{style sheet language}, we can select individually elements in the main file and change the style. In addition, we can apply the same configuration to a specific group of elements that share the same aspect. 
 
@@ -279,7 +279,7 @@ One of the simplest examples of HTML can be seen in the Code \ref{lst:HTML1}. It
 </html> 
 \end{lstlisting}
 
-We could write now the Code \ref{lst:HTML1} in the notepad, save it with the name \textit{index.html} and open the file with the browser of our computer. The browser would interpret it and show the result as a common internet webpage. The browser also takes into account the HTML version written at the start of the code since not all the browser support all the versions, it must be remarked that creating webpages involves that we always depend on the browser used by the user. 
+We could write now the Code \ref{lst:HTML1} in the notepad, save it with the name \texttt{index.html} and open the file with the browser of our computer. The browser would interpret it and show the result as a common internet webpage. The browser also takes into account the HTML version written at the start of the code since not all the browser support all the versions, it must be remarked that creating webpages involves that we always depend on the browser used by the user. 
 
 
         \FloatBarrier
@@ -316,7 +316,7 @@ color: red;
 
 In the beginning, JavaScript was only used in the client side (in the browser), but node js have made possible to run also JavaScript on the server side. Today, JavaScript is everywhere (Desktop/Server/Mobile) and, as it has been said, it is used to program the behaviour of the webpages. JavaScript can change content of the HTML, change attribute values, styles, show or hide elements and more.
 
-In the HTML file, the code of JavaScript must be written between \textless script\textgreater ~ and \textless/script\textgreater ~ tags and any number of scripts can be written in the whole document, in the body, the head, or in both. External scripts are really useful when the same code is used in different web pages and also when developing a multilayer project (all the documents are separated conceptually in different layers). In this case we reference the external file (called \textit{ExternalScripts.js}) as it is shown in the Code \ref{lst:JS1} and the reference can be placed in the head or in the body. One of the advantages of this kind of structure is that the HTML and JavaScript files are easier to read and maintain. \vskip \baselineskip
+In the HTML file, the code of JavaScript must be written between \textless script\textgreater ~ and \textless/script\textgreater ~ tags and any number of scripts can be written in the whole document, in the body, the head, or in both. External scripts are really useful when the same code is used in different web pages and also when developing a multilayer project (all the documents are separated conceptually in different layers). In this case we reference the external file (called \texttt{ExternalScripts.js}) as it is shown in the Code \ref{lst:JS1} and the reference can be placed in the head or in the body. One of the advantages of this kind of structure is that the HTML and JavaScript files are easier to read and maintain. \vskip \baselineskip
 
 \begin{lstlisting}[language=Java, caption={Example of the inclusion of JavaScript files in our main HTML.}, label={lst:JS1}]
 <script src="ExternalScripts.js"> </script> 
@@ -354,7 +354,7 @@ Now, we are going to install the LTS version of the runtime (long-term support, 
 
 \begin{enumerate}
     \item Download the installer from the Node.js website: \url{https://nodejs.org/en/download/}.
-    \item Choose the ``recommended version for most users'' installer for your computer (typically Windows 64-bit) and download the installer.
+    \item Choose the \textit{recommended version for most users} installer for your computer (typically Windows 64-bit) and download the installer.
     \item Double click on the file that you have obtained.
     \item Click on \textit{Next}, accept conditions and click again on \textit{Next}.
     \item Maintain the same location for the installation and click twice in \textit{Next}.
@@ -385,11 +385,11 @@ To create a Node.js project, proceed with the following steps:
     \FloatBarrier
     \section{Execute the ``Hello world'' example (Node.js)} 
     
-You can check in the solution directory chosen that a folder with the project has been created, inside, the project is represented by a \textit{.njsproj} file. In the solution explorer you will find a npm node which shows the already installed npm packages (NPM is a package manager for Node.js with thousands of free packages (or modules) to download and use).
+You can check in the solution directory chosen that a folder with the project has been created, inside, the project is represented by a \texttt{.njsproj} file. In the solution explorer you will find a npm node which shows the already installed npm packages (NPM is a package manager for Node.js with thousands of free packages (or modules) to download and use).
 
-In order to check that everything is correctly installed we run the ``Hello world" example. This example is written automatically when we select this kind of project so you can open the file \textit{app.ts} (double-clicking on this name in the solution explorer) and check that is written something similar to the code \ref{lst:Node1}. \vskip \baselineskip
+In order to check that everything is correctly installed we run the ``Hello world" example. This example is written automatically when we select this kind of project so you can open the file \texttt{app.ts} (double-clicking on this name in the solution explorer) and check that is written something similar to the code \ref{lst:Node1}. \vskip \baselineskip
 
-\begin{lstlisting}[language=Java, caption={''Hello world'' example written in a Node.js project.}, label={lst:Node1}]
+\begin{lstlisting}[language=Java, caption={``Hello world'' example written in a Node.js project.}, label={lst:Node1}]
 console.log('Hello world');
 \end{lstlisting}
 
@@ -402,7 +402,7 @@ After building and starting the project this program opens the console and shows
 \end{enumerate}
 
 \begin{IN}
-    If the console is immediately closed after printing ``Hello world'' in your computer, you have to force the process to wait after finishing the execution. Click on \textit{DEBUG/Options...} and look for ``NodeJS Tools", there tick the box ``Wait for input when process exits normally''.
+    If the console is immediately closed after printing ``Hello world'' in your computer, you have to force the process to wait after finishing the execution. Click on \textit{DEBUG/Options...} and look for ``NodeJS Tools", there tick the box \textit{Wait for input when process exits normally}.
 \end{IN} 
 
 
@@ -440,8 +440,8 @@ Cordova allows us to create Phone Apps starting with our previously created Web 
 
 \begin{enumerate}
     \item Open Visual Studio installer as an administrator and click on \textit{Modify}.
-    \item Select in the \textit{Workloads} (in the tab reserved for smartphones and games) the tools related to ``Development for Mobile Phones Devices with JavaScript'' with the predefined optional installations selected (GIT for Windows is not needed) (see Figure \ref{fig:cor1}).
-    \item In this case we also need from the \textit{Individual Components} tab the ``Google Android Emulator (API level 27)'' and the ``Installation of Android SDK (API level 27)'' (Figures \ref{fig:cor2} and \ref{fig:cor3}).
+    \item Select in the \textit{Workloads} (in the tab reserved for smartphones and games) the tools related to \textit{Development for Mobile Phones Devices with JavaScript} with the predefined optional installations selected (GIT for Windows is not needed) (see Figure \ref{fig:cor1}).
+    \item In this case we also need from the \textit{Individual Components} tab the \textit{Google Android Emulator (API level 27)} and the \textit{Installation of Android SDK (API level 27)} (Figures \ref{fig:cor2} and \ref{fig:cor3}).
     \item Click on \textit{Modify} and wait for the process to finish downloading and installing.
 \end{enumerate}
 
@@ -476,7 +476,7 @@ The next step is to create a project with Cordova, follow these steps:
 
 \begin{enumerate}
     \item Click on \textit{File/New/Project...} or press Ctrl+Shift+N (Figure \ref{fig:Cordova1}).
-    \item Choose ``Blank App (Apache Cordova)'' in the tab \textit{Installed/JavaScript/Mobile Apps}. Name the project ``HelloWorld'' (this will be the name of the app), choose the location of the project and name the solution: ``CordovaProjects'' for example (Figure \ref{fig:Cordova2}).
+    \item Choose \textit{Blank App (Apache Cordova)} in the tab \textit{Installed/JavaScript/Mobile Apps}. Name the project ``HelloWorld'' (this will be the name of the app), choose the location of the project and name the solution: ``CordovaProjects'' for example (Figure \ref{fig:Cordova2}).
     \item Click on \textit{OK}.
     \item The aspect by default of the solution and project is seen in Figure \ref{fig:Cordova3}.
 \end{enumerate}
@@ -486,13 +486,13 @@ The next step is to create a project with Cordova, follow these steps:
 Now we can simulate and execute the HelloWorld example starting with the webpage created in the previous section:
 
 \begin{enumerate}
-    \item Select all the files inside the ``www'' folder and delete them.
-    \item Click with the right button of your mouse on the folder ``www'' and click on \textit{Add/Existing Item...}, navigate to the location of the files created in the section \ref{sec:Web} (HTML/CSS/JS) and add to the project all the files and folders. The final aspect of the project opened is shown in the Figure \ref{fig:Cordova4}.
+    \item Select all the files inside the \texttt{www} folder and delete them.
+    \item Click with the right button of your mouse on the folder \texttt{www} and click on \textit{Add/Existing Item...}, navigate to the location of the files created in the section \ref{sec:Web} (HTML/CSS/JS) and add to the project all the files and folders. The final aspect of the project opened is shown in the Figure \ref{fig:Cordova4}.
     \item Deploy the menu with the solution configurations (Debug is shown by default) and open the Configuration Manager.
-    \item In order to simulate the result of our App, deselect ``Deploy'' when the Configuration \textit{Debug} and Platform \textit{Android} are selected (Figure \ref{fig:Cordova5}).
+    \item In order to simulate the result of our App, deselect \textit{Deploy} when the Configuration \textit{Debug} and Platform \textit{Android} are selected (Figure \ref{fig:Cordova5}).
     \item Close the Configuration Manager and check that the configuration of the solution is marked as \textbf{Debug - Android - Simulate in Browser LG G5}. Click on the execution button and the result will appear in your default browser (Chrome, Firefox, etc. Figure \ref{fig:Cordova6}).
     \item If the results of the simulation are correct, the .apk file can be generated in order to install the App in your Android phone.
-    \item In the same place where the simulation is chosen, now choose ``Device'' (Figure \ref{fig:Cordova7}). Execute the project and a \textit{.apk} file will appear in the folder of the project, in the path 
+    \item In the same place where the simulation is chosen, now choose \textit{Device} (Figure \ref{fig:Cordova7}). Execute the project and a \texttt{.apk} file will appear in the folder of the project, in the path 
     
     \textit{platforms\textbackslash android\textbackslash build\textbackslash outputs\textbackslash apk}.
     
@@ -507,7 +507,7 @@ Now we can simulate and execute the HelloWorld example starting with the webpage
     
     If it is your case, install or update the JDK (Java Development Kit) of Java. We have fixed this problem by installing not only the release 12.0.2 of the JDK but also installing the update 8u221 for the previous release of the JDK (Java SE 8). \newline
     
-    In order to install those complements open the website and go through the page looking for the Download button of the Oracle JDK of the version \textit{Java SE 12.0.2} and the JDK of \textit{Java SE 8u221}. Click first on one button and download and install the file \textit{jdk-12.0.2\_windows-x64\_bin.zip}. Later, click on the second one and download and install \textit{jdk-8u221-windows-x64.exe}.
+    In order to install those complements open the website and go through the page looking for the Download button of the Oracle JDK of the version \textit{Java SE 12.0.2} and the JDK of \textit{Java SE 8u221}. Click first on one button and download and install the file \texttt{jdk-12.0.2\_windows-x64\_bin.zip}. Later, click on the second one and download and install \texttt{jdk-8u221-windows-x64.exe}.
 \end{IN}
 
 \begin{figure}
@@ -527,21 +527,21 @@ Now we can simulate and execute the HelloWorld example starting with the webpage
 \begin{figure}
     \centering
     \includegraphics[width= 0.6 \textwidth]{Figures/Cordova3}
-    \caption{Initial aspect of the project, the folder ``www'' is where all the files of the HTML/CSS/JS project will be stored.}
+    \caption{Initial aspect of the project, the folder \texttt{www }is where all the files of the HTML/CSS/JS project will be stored.}
     \label{fig:Cordova3}
 \end{figure}
 
 \begin{figure}
     \centering
     \includegraphics[width= \textwidth]{Figures/Cordova4}
-    \caption{Solution explorer with our files already included, the ``index.html'' that we created in the previous sections is displayed.}
+    \caption{Solution explorer with our files already included, the \texttt{index.html} that we created in the previous sections is displayed.}
     \label{fig:Cordova4}
 \end{figure}
 
 \begin{figure}
     \centering
     \includegraphics[width=0.8 \textwidth]{Figures/Cordova5}
-    \caption{Configuration Manager of the solution, here we deselect the Deploy option that allows to transfer the \textit{.apk} file to the smartphone automatically when it is connected.}
+    \caption{Configuration Manager of the solution, here we deselect the Deploy option that allows to transfer the \texttt{.apk} file to the smartphone automatically when it is connected.}
     \label{fig:Cordova5}
 \end{figure}
 
@@ -555,14 +555,14 @@ Now we can simulate and execute the HelloWorld example starting with the webpage
 \begin{figure}
     \centering
     \includegraphics[width= \textwidth]{Figures/Cordova7}
-    \caption{Configuration to choose in order to generate the \textit{.apk} file that will be installed in the Android smartphone.}
+    \caption{Configuration to choose in order to generate the \texttt{.apk} file that will be installed in the Android smartphone.}
     \label{fig:Cordova7}
 \end{figure}
 
 \begin{figure}
     \centering
     \includegraphics[width= 0.6 \textwidth]{Figures/CordovaApp}
-    \caption{Phone Application installed in the smartphone through the \textit{.apk} file.}
+    \caption{Phone Application installed in the smartphone through the \texttt{.apk} file.}
     \label{fig:CordovaApp}
 \end{figure}
 

@@ -36,7 +36,7 @@ To install this plug--in, follow the next steps:
 	\item Click \textit{OK}.		
 \end{enumerate}
 
-Visual Studio will create a folder in the Desktop with the name ``ArduinoProjects'' to hold the complete solution. Inside this folder another folder named ``HelloWorld'' will contain the project \textit{HelloWorld.ino}. In this case this project contains only one file. In order to be compatible with the Arduino IDE this folder and the Arduino \textit{.ino} file should have the same name. 
+Visual Studio will create a folder in the Desktop with the name ``ArduinoProjects'' to hold the complete solution. Inside this folder another folder named ``HelloWorld'' will contain the project \texttt{HelloWorld.ino}. In this case this project contains only one file. In order to be compatible with the Arduino IDE this folder and the Arduino \texttt{.ino} file should have the same name. 
 
 \vspace{0.5cm}
     \section{Execute the ``Hello world'' with Arduino}
@@ -51,7 +51,7 @@ Now it is a good practice to determine if the Arduino compiler is properly insta
 	\item Select the specific Arduino board that we have.
 	\item Plug the Arduino board with a USB wire. 
 	\item Select the Serial port in which the Arduino board is discovered: COM1, COM2, ...
-	\item Copy and paste the following code in the \textit{HelloWorld.ino} file:  \vskip \baselineskip 
+	\item Copy and paste the following code in the \texttt{HelloWorld.ino} file:  \vskip \baselineskip 
 	
 	\lstinputlisting[language=C, firstline=1, lastline=27]{Listing/Helloworld.cpp}
 
@@ -84,19 +84,19 @@ To do that, we will start from a new project named: \textit{Automation}. This pr
 \newpage
 \begin{enumerate} 
 	\item Open the visual studio solution that we have created: \textit{ArduinoProjects}. 
-	\item Add a new Arduino project to the same solution named: \textit{Automation} as we did to create \textit{HelloWorld}.  
+	\item Add a new Arduino project to the same solution named: \textit{Automation} as we did to create ``HelloWorld''.  
 	\item Add a new share item:
 	 \textit{File/New/Project/Add/Visual C++/Arduino Shared Code Project}.
 	\item Select \textit{Add to solution}.
 	\item Name \textit{Leds} the new project. 
-	\item Create two files: \textit{LedClass.h} and \textit{LedClass.cpp} inside this share item. 
-	\item Copy and paste the following code in the \textit{Ledclass.h} file: 
+	\item Create two files: \texttt{LedClass.h} and \texttt{LedClass.cpp} inside this share item. 
+	\item Copy and paste the following code in the \texttt{Ledclass.h} file: 
 	
     %\newpage
 	\lstinputlisting[language=C, firstline=2, lastline=27]{Listing/LedClass.h}
 	
     %\newpage
-	\item Copy and paste the following code in the  \textit{Ledclass.cpp} file: 
+	\item Copy and paste the following code in the  \texttt{Ledclass.cpp} file: 
 	
 	\lstinputlisting[language=C, firstline=2, lastline=27]{Listing/Ledclass.cpp}
 	
@@ -152,7 +152,7 @@ To create a C++ project, proceed with the following steps:
     \FloatBarrier
     \section{Execute the ``Hello world'' example with C++}
     
-Now we are going to execute our first example in C++, the Hello World program. Firstly, include a new source file to the project by clicking with the right button in the folder ``Source Files'' and on \textit{Add/New Item...} (see Figure \ref{fig:C++3}). Secondly, choose \textit{C++ File (.cpp)} in the tab \textit{Installed/Visual C++}, change the name of the file to ``HelloWorld.cpp'' and click on \textit{Add} (Figure \ref{fig:C++4}). You will find a blank file where copying the following code: \vskip \baselineskip 
+Now we are going to execute our first example in C++, the Hello World program. Firstly, include a new source file to the project by clicking with the right button in the folder ``Source Files'' and on \textit{Add/New Item...} (see Figure \ref{fig:C++3}). Secondly, choose \textit{C++ File (.cpp)} in the tab \textit{Installed/Visual C++}, change the name of the file to \texttt{HelloWorld.cpp} and click on \textit{Add} (Figure \ref{fig:C++4}). You will find a blank file where copying the following code: \vskip \baselineskip 
 
 \begin{lstlisting}[language=C++, caption={Hello World example in C++.}, label={lst:C++example}]
 #include <iostream>
@@ -189,7 +189,7 @@ To compile, link and execute the program follow the next steps (the box in Figur
 \begin{figure}
     \centering
     \includegraphics[width= \textwidth]{Figures/C++4}
-    \caption{Window where choosing the C++ File. Name it ``HelloWorld'' and add it to the project. The \textit{.cpp} file stores the source code for a C++ program.}
+    \caption{Window where choosing the C++ File. Name it ``HelloWorld'' and add it to the project. The \texttt{.cpp} file stores the source code for a C++ program.}
     \label{fig:C++4}
 \end{figure}    
  

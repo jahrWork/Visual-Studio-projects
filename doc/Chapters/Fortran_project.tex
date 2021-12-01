@@ -50,7 +50,7 @@ As it has been said before, we need now the compiler of the programming language
     \begin{enumerate}
         \item Now you have both installers downloaded in your computer. Double click first on the installer of the Base Toolkit, named something similar to:
         
-         \textit{w\_BaseKit\_p\_XXXX.X.X.XXXX\_offline.exe}.
+         \texttt{w\_BaseKit\_p\_XXXX.X.X.XXXX\_offline.exe}.
         \item Accept the installation as an administrator and click on \textit{Extract} the temporary files needed by the installer. Wait until the process finishes. 
         \item In the first window that appears click on \textit{Continue} and in the next one mark the option \textit{I accept the terms of the license agreement}, click on \textit{Continue} for the Recommended Installation (Figure \ref{fig:Proceso2C}). 
         \item Now the installer shows warnings related to the needed modules (this step should not block the installation so we continue with the process), click on the right arrow. 
@@ -58,7 +58,7 @@ As it has been said before, we need now the compiler of the programming language
         \item In the last window you have to decide about consenting or not the collection of private information, choose your options and click on \textit{Install}.
         \item Wait until the process finishes (it can be slow) (Figure \ref{fig:Proceso2E}). 
         \item When finished click on \textit{Go to Installed Products} and then close the installer. 
-        \item Follow the same process described with the other installer, named something similar to \textit{w\_HPCKit\_p\_2021.1.0.2682\_offline.exe}.
+        \item Follow the same process described with the other installer, named something similar to \texttt{w\_HPCKit\_p\_2021.1.0.2682\_offline.exe}.
     \end{enumerate}
 \end{itemize}
 
@@ -204,7 +204,7 @@ To create a Fortran project, proceed with the following steps:
 In order to check that everything is correctly installed, we will run the easiest example. This is usually called the ``Hello world" example. This example is written automatically when we select 
 \textit{Main Program Code}. This program opens the window console, writes the message ``Hello world" and after pressing the enter key, it closes the window console. 
 
-If we want to execute this Fortran program, a translation to machine code must be done. This compiling and linking process is done automatically by Visual Studio by clicking the right button and is accomplished by the two following steps. Assuming the file is called ``p1'' for example, first the source file \textit{p1.f90} is translated to an object code \textit{p1.o} and then it is linked to other components to create an executable file: \textit{p1.exe}. 
+If we want to execute this Fortran program, a translation to machine code must be done. This compiling and linking process is done automatically by Visual Studio by clicking the right button and is accomplished by the two following steps. Assuming the file is called ``p1'' for example, first the source file \texttt{p1.f90} is translated to an object code \texttt{p1.o} and then it is linked to other components to create an executable file: \texttt{p1.exe}. 
   
 \newpage
 To compile, link and execute the program follow the next steps:
@@ -231,9 +231,9 @@ Think for example in a library that we use for different projects, it can be sto
 
 On one hand, in the case of Fortran, in the solution explorer we find three folders by default: \textit{Source}, \textit{Resource} and \textit{Header Files}. We typically use the Source folder for all the source codes written for the project while the other two are empty. Create the most appropriate structure inside \textit{Source} folder (by creating new folders for example) and organize the project. The libraries and modules can also be included there. 
 
-On the other hand, in the hard drive the structure is different, choose the most comfortable for your purposes. Apart from the \textit{.sln} and the \textit{.suo} files in the solution folder and the \textit{.vfproj} file in the project folder (all essential for the project), we find the folders associated to the results of the build and compilation processes. If we build the project in the Release configuration, a \textit{Release} folder appears with the \textit{.obj} and \textit{.mod} files, the executable, etc. If it is built in Debug mode, the same happens with a \textit{Debug} folder. We suggest to create a \textit{sources} folder inside the project path and store there all the \textit{.f90} real files with the source code.
+On the other hand, in the hard drive the structure is different, choose the most comfortable for your purposes. Apart from the \texttt{.sln} and the \texttt{.suo} files in the solution folder and the \texttt{.vfproj} file in the project folder (all essential for the project), we find the folders associated to the results of the build and compilation processes. If we build the project in the Release configuration, a \texttt{Release} folder appears with the \texttt{.obj} and \texttt{.mod} files, the executable, etc. If it is built in Debug mode, the same happens with a \texttt{Debug} folder. We suggest to create a \texttt{sources} folder inside the project path and store there all the \texttt{.f90} real files with the source code.
 
-We can check in the solution location that after creating the solution and project, a \textit{.sln} file, a folder with the name of the project and a \textit{.vfproj} file inside have appeared. If the Solution is already created and we just want to open it we can double click on the \textit{.sln} file or click on \textit{File/Open/Project/Solution...} in the IDE and look for our \textit{.sln} file. 
+We can check in the solution location that after creating the solution and project, a \texttt{.sln} file, a folder with the name of the project and a \texttt{.vfproj} file inside have appeared. If the Solution is already created and we just want to open it we can double click on the \texttt{.sln} file or click on \textit{File/Open/Project/Solution...} in the IDE and look for our \texttt{.sln} file. 
 
 \textbf{Include another project} in that solution:
 \begin{enumerate}[nosep]
@@ -291,7 +291,7 @@ With the project opened and selected in the solution explorer we have to click o
         
         \item In addition, notice that a change in the properties of the project will change all internal files \textbf{except those properties of files that we have changed individually}. 
         
-        For example, if we mark \textbf{8 (/real\_size:64)} in \textit{Fortran/Data/default Real KIND} in a ``example.f90'' file and we change the same option in the project configuration (let's say to \textbf{16 (/real\_size:128)}), all files are modified but ``example.f90'' does not. What's more, a red spot appears in the symbol of the file in the solution explorer notifying this condition. Furthermore, if the option does not have the compiler's default value, the value itself appears in bold in the configuration window.
+        For example, if we mark \textbf{8 (/real\_size:64)} in \texttt{Fortran/Data/default Real KIND} in a \texttt{example.f90} file and we change the same option in the project configuration (let's say to \textbf{16 (/real\_size:128)}), all files are modified but \texttt{example.f90} does not. What's more, a red spot appears in the symbol of the file in the solution explorer notifying this condition. Furthermore, if the option does not have the compiler's default value, the value itself appears in bold in the configuration window.
     \end{itemize}
 \end{IN}
 
@@ -315,7 +315,7 @@ Now let's take a look at some important compiler options that can be found in th
 \begin{enumerate}
     
     %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%C
-    \item In \textit{Fortran/Data/\textbf{Default Real KIND}} we can change the default value to ``8 (/real\_size:64)''. Then, when we write in our code 
+    \item In \texttt{Fortran/Data/\textbf{Default Real KIND}} we can change the default value to ``8 (/real\_size:64)''. Then, when we write in our code 
     
     \textcolor{black}{\texttt{real :: x}}  
     
@@ -327,7 +327,7 @@ Now let's take a look at some important compiler options that can be found in th
     
     Using this compilation option, when we want to run our program with simple precision, we just have to change the value and the whole program will be executed with simple precision. The following example shows both ways of executing the same program and demonstrates that the results can be different depending on the compiler options. \label{Configuration1}
     
-    Execute the following code changing the \textit{Default Real KIND} value in the compiler options, first with the value by default (simple precision) and then forcing the code to be executed in double precision. \vskip \baselineskip
+    Execute the following code changing the \texttt{Default Real KIND} value in the compiler options, first with the value by default (simple precision) and then forcing the code to be executed in double precision. \vskip \baselineskip
     
     \lstinputlisting[language=Fortran, firstline=1, lastline=24]{Listing/ExManual2.f90}
 
@@ -365,7 +365,7 @@ Significant digits          15
     \begin{itemize}
 \item Notice how in both cases the \verb|x| is a simple precision real number since we are forcing the program to declare this variable as \verb|kind=4|. Then, the upper limit for this variable is around \texttt{E+38} as the \verb|huge(x)| function returns, the lower limit is around \texttt{E-38} according to \verb|tiny(x)| function and we can trust the first 6 significant digits of the number (\verb|epsilon(x)| calculates this value). 
 
-\item However, the behaviour of the \verb|y| is really different. In the declaration of the variable we have not specified the kind of the real variable. As said before, in the first execution (\textit{Default Real KIND} 4), the compiler treats \verb|y| as simple precision and in the second execution (\textit{Default Real Kind 8}) the variable is treated as double precision. Hence, the limits for \verb|y| in the second case are those related to double precision (\texttt{E+308}, \texttt{E+308} and 15 significant digits). In conclusion, the same code can return different results depending on the compilation options.
+\item However, the behaviour of the \verb|y| is really different. In the declaration of the variable we have not specified the kind of the real variable. As said before, in the first execution (\texttt{Default Real KIND} 4), the compiler treats \verb|y| as simple precision and in the second execution (\texttt{Default Real Kind 8}) the variable is treated as double precision. Hence, the limits for \verb|y| in the second case are those related to double precision (\texttt{E+308}, \texttt{E+308} and 15 significant digits). In conclusion, the same code can return different results depending on the compilation options.
     \end{itemize}
 \end{IN}   
     
@@ -374,10 +374,10 @@ Significant digits          15
     \item \textbf{Stack Overflow} can occur in our software for many reasons. It happens when the stack memory overflows and occupies other memory regions, then the stack pointer exceeds the stack bound \citep{stack} (concepts like call stack can be found in \citep{stack2}). Since the problem is to allocate more memory on the stack than the maximum that fits (too large local arrays or infinite recursion for example) one solution is to extend the size of the stack. We can change the configuration by clicking on \textit{Linker/Command Line/Additional Options:} and writing ``/STACK:100000000''.
     
     %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%C
-    \item \textbf{Heap allocation} is another method to avoid stack overflow in our programs. The heap is one of the three memories used by a Fortran application, it is dynamically allocated, bigger than the Stack in size but also slower. However, if your program needs from large automatic arrays (those whose size is defined by routine arguments) or makes arithmetic with large arrays (temporary arrays are normally stored in the stack) it can be a good idea to automatically store those arrays in the Heap, instead of stack. In order to do that click on \textit{Fortran/Optimization/Heap Arrays} and write a value in kilobytes for the minimum temporary/automatic array size to be allocated in heap. If \texttt{0} is written, then all those arrays are affected. Notice that writing \texttt{/heap-arrays0} in \textit{Fortran/Command Line/Additional Options} is another way to do the same. 
+    \item \textbf{Heap allocation} is another method to avoid stack overflow in our programs. The heap is one of the three memories used by a Fortran application, it is dynamically allocated, bigger than the Stack in size but also slower. However, if your program needs from large automatic arrays (those whose size is defined by routine arguments) or makes arithmetic with large arrays (temporary arrays are normally stored in the stack) it can be a good idea to automatically store those arrays in the Heap, instead of stack. In order to do that click on \texttt{Fortran/Optimization/Heap Arrays} and write a value in kilobytes for the minimum temporary/automatic array size to be allocated in heap. If \texttt{0} is written, then all those arrays are affected. Notice that writing \texttt{/heap-arrays0} in \texttt{Fortran/Command Line/Additional Options} is another way to do the same. 
     
     %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%C
-    \item In \textit{Fortran/Command Line/Additional Options:}, in order to enable \textbf{automatic reallocation}, write ``/assume:realloc\_lhs''. This option decides if using current Fortran Standard rules or old Fortran 2003 rules in relation to the automatic reallocation, which is described as:
+    \item In \texttt{Fortran/Command Line/Additional Options:}, in order to enable \textbf{automatic reallocation}, write ``/assume:realloc\_lhs''. This option decides if using current Fortran Standard rules or old Fortran 2003 rules in relation to the automatic reallocation, which is described as:
     
     \begin{center}
         \begin{minipage}{0.7\linewidth}
@@ -395,19 +395,19 @@ Significant digits          15
 
 
     %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%C
-    \item In \textit{Fortran/Run-time} the option \textbf{\textit{Generate Traceback Information}} is by default deactivated. Set it as \textit{Yes} so extra information will be placed in the object files and in the case of appearing a severe error in the run time, you will be capable of locate the source of error because source file, routine name and line number correlation will be displayed. This function is independent of the Debug option.
+    \item In \texttt{Fortran/Run-time} the option \textbf{\texttt{Generate Traceback Information}} is by default deactivated. Set it as \texttt{Yes} so extra information will be placed in the object files and in the case of appearing a severe error in the run time, you will be capable of locate the source of error because source file, routine name and line number correlation will be displayed. This function is independent of the Debug option.
     
     %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%C
-    \item In the same section, \textit{Fortran/Run-time}, fix the option \textbf{\textit{Runtime Error Checking}} to \textit{All} so the compiler checks at run time all the available conditions. These conditions are for example related to pointers (check if some allocatable objects are not allocated) or uninitialized variables. Some conditions in the code that could be ignored by the compiler, in this case are considered as Warnings and the compilation shows them. Then, it forces the programmer to make a clean code and take control of those inappropriate conditions. 
+    \item In the same section, \texttt{Fortran/Run-time}, fix the option \textbf{\texttt{Runtime Error Checking}} to \texttt{All} so the compiler checks at run time all the available conditions. These conditions are for example related to pointers (check if some allocatable objects are not allocated) or uninitialized variables. Some conditions in the code that could be ignored by the compiler, in this case are considered as Warnings and the compilation shows them. Then, it forces the programmer to make a clean code and take control of those inappropriate conditions. 
     
     %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%C
-    \item In the section \textit{Fortran/Diagnostics} activate \textbf{\textit{Treat Warnings As Errors}}. This option changes some Warnings to Errors so the compilation will fail until they are solved. This function helps to maintain a clean code and avoids to accumulate bugs in a program. Even when those warnings could let the program be compiled, they can also be conceptual mistakes and they can become a problem if a lot of ignored warnings are accumulated in the projects.
+    \item In the section \texttt{Fortran/Diagnostics} activate \textbf{\texttt{Treat Warnings As Errors}}. This option changes some Warnings to Errors so the compilation will fail until they are solved. This function helps to maintain a clean code and avoids to accumulate bugs in a program. Even when those warnings could let the program be compiled, they can also be conceptual mistakes and they can become a problem if a lot of ignored warnings are accumulated in the projects.
     
     %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%C
-    \item In the same section, \textit{Fortran/Diagnostics}, the option \textbf{\textit{Warn For Non-standard Fortran}} makes the compiler to return warnings when there are language elements that are not contained in the Fortran standard. These standard warnings do not affect compilation but they help the programmer to modernize the programming style, ensure that other programmers understand the code, comply with common rules and avoid problems with different compilers. In our case, we want to be adapted to the Fortran 2008 standard so fix that value in the compilation option.
+    \item In the same section, \texttt{Fortran/Diagnostics}, the option \textbf{\texttt{Warn For Non-standard Fortran}} makes the compiler to return warnings when there are language elements that are not contained in the Fortran standard. These standard warnings do not affect compilation but they help the programmer to modernize the programming style, ensure that other programmers understand the code, comply with common rules and avoid problems with different compilers. In our case, we want to be adapted to the Fortran 2008 standard so fix that value in the compilation option.
     
     %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%C
-    \item Set the option \textit{Fortran/Diagnostics/\textbf{Compile Time Diagnostics}} to \textit{Show All} and the compiler will warn about a pile of interesting conditions to consider. For example, it will issue information about: variables declared in the code but not used after that, source code lines that exceed the maximum column width or statement functions that are never called in the program. 
+    \item Set the option \texttt{Fortran/Diagnostics/\textbf{Compile Time Diagnostics}} to \texttt{Show All} and the compiler will warn about a pile of interesting conditions to consider. For example, it will issue information about: variables declared in the code but not used after that, source code lines that exceed the maximum column width or statement functions that are never called in the program. 
 
 \end{enumerate}
 
@@ -430,9 +430,9 @@ Significant digits          15
     
     \item  Unzip the downloaded file and look for: 
     
-    \textit{disifl\_d.lib} and \textit{dislin\_d.f90}
+    \texttt{disifl\_d.lib} and \texttt{dislin\_d.f90}
      
-    It is assumed that our calculations are done in double precision and that is why double precision files (\textit{*\_d.lib, dislin\_d.f90}) are selected. 
+    It is assumed that our calculations are done in double precision and that is why double precision files (\texttt{*\_d.lib, dislin\_d.f90}) are selected. 
      
     \item Create a folder named DISLIN and locate those files on it. 
     
@@ -462,12 +462,12 @@ Significant digits          15
  
 
 
-Now our dislin example should work, take note of the subroutines used in the plotting example below in order to use it in future codes. The example allows to plot a sine graph in a very simple way. It is advisable to write a ``read(*,*)'' line at the end of the program to avoid that the command line gets closed after finishing. \vspace{0.5cm}
+Now our dislin example should work, take note of the subroutines used in the plotting example below in order to use it in future codes. The example allows to plot a sine graph in a very simple way. It is advisable to write a \texttt{read(*,*)} line at the end of the program to avoid that the command line gets closed after finishing. \vspace{0.5cm}
 
 \lstinputlisting[language=Fortran, firstline=1, lastline=30]{Listing/Graph.f90} 
 
 \begin{IN}
-    In case that you comment the ``use dislin'' statement that enables the use of DISLIN libraries (because you are not going to use it for example) do not forget to reverse last two steps of the DISLIN configuration. A list of errors could appear while building the code if you do not change the configuration. 
+    In case that you comment the \texttt{use dislin} statement that enables the use of DISLIN libraries (because you are not going to use it for example) do not forget to reverse last two steps of the DISLIN configuration. A list of errors could appear while building the code if you do not change the configuration. 
 \end{IN}
 
 
@@ -495,7 +495,7 @@ In this section some general concepts and good practices are going to be explain
 \begin{enumerate}[nosep]
     \item What are Release and Debug execution modes?
     \item What are Compile, Build and Start without debugging?
-    \item What are Static and Dynamic libraries? How can I create a \textit{.lib} file?
+    \item What are Static and Dynamic libraries? How can I create a \texttt{.lib} file?
     \item What should I know about files and formats in Fortran language?
 \end{enumerate}
 
@@ -504,7 +504,7 @@ In this section some general concepts and good practices are going to be explain
     %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%C
     \item \textbf{What are Release and Debug execution modes?} 
     
-    Release and Debug are two possible modes for executing our program, each of them has its own default configuration that allow us to build and run the code in a different way. We can create more modes with different configurations for the solution or for the project. For example, we could create one mode where the option \textit{Default Real KIND} of Fortran compiler is 4 and other where it is 8. In the first one a variable declared as a real number will be considered of simple precision by default, in the second case it will be treated as a double precision real number. By changing between both modes, we would run the code with the two configurations. In order to define these modes we can access the Configuration Manager by clicking on \textit{Build/Configuration Manager} or by deploying the selector of Configuration (where the mode \textit{Release} or \textit{Debug} are shown). There we can create new modes or edit those we have. Once a mode is selected, the configuration can be modified in the properties page of the project (click with the right button in the name of the project and click on \textit{Properties}). 
+    Release and Debug are two possible modes for executing our program, each of them has its own default configuration that allow us to build and run the code in a different way. We can create more modes with different configurations for the solution or for the project. For example, we could create one mode where the option \texttt{Default Real KIND} of Fortran compiler is 4 and other where it is 8. In the first one a variable declared as a real number will be considered of simple precision by default, in the second case it will be treated as a double precision real number. By changing between both modes, we would run the code with the two configurations. In order to define these modes we can access the Configuration Manager by clicking on \textit{Build/Configuration Manager} or by deploying the selector of Configuration (where the mode \textit{Release} or \textit{Debug} are shown). There we can create new modes or edit those we have. Once a mode is selected, the configuration can be modified in the properties page of the project (click with the right button in the name of the project and click on \textit{Properties}). 
    
     Regarding the Debug mode, it will allow you to run the code without turning on the optimiser. A lot of information will be included in the build files so we can check our program step by step, it can be useful for example for fixing bugs. However, if we are developing Numerical Simulations and related programs, we will use another kind of debugging: graphic assisted debugging. Checking errors in the code starts with the printing of results and the validation of the program module by module. That is why we typically include Dislin libraries in our program, to check results quickly and decide if we have programmed correctly our simulation, later we will save the numerical results in order to plot them with another tool. 
     
@@ -513,7 +513,7 @@ In this section some general concepts and good practices are going to be explain
     
     We have seen what Debug and Release modes are and we now understand why one of the first IDE configurations to make is changing the command that executes the program, from the \textit{Start with Debugging} to this one (see section \ref{StartwD}). This command goes directly to the execution of the code using the Release mode (or the selected one, but not debugging). However, we are going to take a closer look at the different options mentioned.
     
-    \textbf{Compile:} Once our project is created inside a solution and the first codes are written, we want to compile the program file by file in order to check that everything is correct. In this step the compiler comes into play, it checks and warns us about all the errors that exists in the program. In order to compile your piece of code open its file and click on \textit{BUILD/Compile} in the IDE. You can also press \textit{Ctrl+F7} or click in the following symbol (that should be in your toolbars\footnote{If you can not see the symbol go to the section \ref{sec:Shortcuts} and modify the aspect of your IDE to show all the interesting shortcuts.}). Notice that you are compiling only the file opened and not the whole project.
+    \textbf{Compile:} Once our project is created inside a solution and the first codes are written, we want to compile the program file by file in order to check that everything is correct. In this step the compiler comes into play, it checks and warns us about all the errors that exists in the program. In order to compile your piece of code open its file and click on \textit{BUILD/Compile} in the IDE. You can also press \texttt{Ctrl+F7} or click in the following symbol (that should be in your toolbars\footnote{If you can not see the symbol go to the section \ref{sec:Shortcuts} and modify the aspect of your IDE to show all the interesting shortcuts.}). Notice that you are compiling only the file opened and not the whole project.
     
     %\raisebox{-\mydepth}{\fbox{\includegraphics[height=2\myheight]{Figures/CompileSymbol}}}
     \begin{figure}[H]
@@ -559,7 +559,7 @@ In this section some general concepts and good practices are going to be explain
     
     There are two options for this task; attach the debugger to the execution of the application or not. In the first case you will be able to pause the execution by breakpoints or use debugging tools such as Watch Window or Diagnostic Tools. However, if you just want to run your application and see the results, it is not necessary to use this integrated debugger, there are different ways of performing a debugging of the code when needed. 
     
-    If \textit{Start without Debugging} option is used Visual Studio will launch your application without attaching the Debugger. Both ways of executing the code can be found in the menu \textit{DEBUG} of the IDE and more specifically the option \textit{without Debugging} can be found clicking on \textit{DEBUG/Start without Debugging}, pressing \textit{Ctrl+F5} or pressing the following icon of your toolbars\footnote{See previous footnote}. 
+    If \textit{Start without Debugging} option is used Visual Studio will launch your application without attaching the Debugger. Both ways of executing the code can be found in the menu \textit{DEBUG} of the IDE and more specifically the option \textit{without Debugging} can be found clicking on \textit{DEBUG/Start without Debugging}, pressing \texttt{Ctrl+F5} or pressing the following icon of your toolbars\footnote{See previous footnote}. 
     
     %\raisebox{-\mydepth}{\fbox{\includegraphics[height=2\myheight]{Figures/StartSymbol}}}
    \begin{figure}[H]
@@ -571,7 +571,7 @@ In this section some general concepts and good practices are going to be explain
     
 	
 	%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-	\item \textbf{What are Static and Dynamic libraries? How can I create a \textit{.lib} file?} \label{sec:Library}
+	\item \textbf{What are Static and Dynamic libraries? How can I create a \texttt{.lib} file?} \label{sec:Library}
 	
 	Let's say we have some modules already validated and we want to create a library with them, the first thing to do is to decide the kind of library to use. 
     
@@ -585,7 +585,7 @@ In this section some general concepts and good practices are going to be explain
         
 		\item Create a new solution (or recycle one of the previous sections). Then, in this solution, create a new project as it is explained previously in this chapter. This project will contain the call to the subroutines stored in the library. Do not forget to choose a proper name for the project.
         
-		\item Include an empty file called \textit{ExampleManual2.f90} in the project and copy the following code:
+		\item Include an empty file called \texttt{ExampleManual2.f90} in the project and copy the following code:
 	    
         \vspace{0.5cm}
 		\lstinputlisting[language=Fortran, firstline=1, lastline=16]{Listing/ExampleManual2.f90}
@@ -600,14 +600,14 @@ In this section some general concepts and good practices are going to be explain
         
         \textit{Library/Static Library}
         
-        Take care of choosing a proper name for the library project (it will be the name of the \textit{.lib} file), in this case let's use the same name as the module \textit{ModuleExample.lib}.
+        Take care of choosing a proper name for the library project (it will be the name of the \texttt{.lib} file), in this case let's use the same name as the module \texttt{ModuleExample.lib}.
         
-		\item Add to this Library project an empty source file called \textit{ModuleExample1.f90} and paste the next example code, this will be the module code stored in our library:	
+		\item Add to this Library project an empty source file called \texttt{ModuleExample1.f90} and paste the next example code, this will be the module code stored in our library:	
         
         \vspace{0.5cm}
         \lstinputlisting[language=Fortran, firstline=1, lastline=29]{Listing/ModuleExample.f90}		
 		
-		\item Then save all and set the library project as startup project (click with the right button on its name in the solution explorer and click on \textit{Set as StartUp Project}). Compile the file \textit{ModuleExample.f90} and build the whole library project in the Release mode. Check that \textit{ModuleExample.lib} and \textit{ModuleExample.mod} appear in the Release folder of the project.
+		\item Then save all and set the library project as startup project (click with the right button on its name in the solution explorer and click on \textit{Set as StartUp Project}). Compile the file \texttt{ModuleExample.f90} and build the whole library project in the Release mode. Check that \texttt{ModuleExample.lib} and \texttt{ModuleExample.mod} appear in the Release folder of the project.
         
 		\item Add to the main project both library files with the Solution Explorer in the \textbf{Source folder} using \textit{right click in the project name/Add/Existing Item.../} and looking for the files (see section \ref{sec:Include}).
         
@@ -621,9 +621,9 @@ In this section some general concepts and good practices are going to be explain
 	
     \begin{IN}
         \begin{itemize}
-            \item Remember that the name of the library project is shared with the name of the \textit{.lib} file that you will have to include in the main project. At the same time the name of the \textit{.mod} file is the same as the name of the module stored in the library. 
+            \item Remember that the name of the library project is shared with the name of the \texttt{.lib} file that you will have to include in the main project. At the same time the name of the \texttt{.mod} file is the same as the name of the module stored in the library. 
             
-            \item Remember that the source file of the library (\textit{ModuleExample1.f90}) is not stored in the folder of the library by default. It is stored in the folder of the main project.
+            \item Remember that the source file of the library (\texttt{ModuleExample1.f90}) is not stored in the folder of the library by default. It is stored in the folder of the main project.
         \end{itemize}
     \end{IN}
 
@@ -634,16 +634,16 @@ In this section some general concepts and good practices are going to be explain
 	%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
     \item \textbf{What should I know about files and formats in Fortran language?}
     
-    We have read in the introduction of this manual about source and object codes and how the program we write needs from both. The first one is what we write with Fortran language and the second one is the translation that the compiler performs in order to make it understandable for computers. The \textbf{source code} written is stored in plain text files and in the case of Fortran, those files have the extension \textit{.f90}, \textit{.f} or \textit{.for}. 
+    We have read in the introduction of this manual about source and object codes and how the program we write needs from both. The first one is what we write with Fortran language and the second one is the translation that the compiler performs in order to make it understandable for computers. The \textbf{source code} written is stored in plain text files and in the case of Fortran, those files have the extension \texttt{.f90}, \texttt{.f} or \texttt{.for}. 
     
     \newpage
-    In order to execute our program, we use the Intel\textregistered \hspace{0.1cm} Fortran Compiler which is in charge of translating the code to machine language. It works developing two sub processes. The first process verifies that the source code is well written (fulfilling all the syntactic and semantic Fortran rules) and once finished, it creates an intermediate code called \textbf{object code} (with extension \textit{.obj} in Windows OS). The second sub process consists in linking the object code with other codes stored in libraries. The extensions used for this process are \textit{.dll} for shareable library files and \textit{.mod} for module files. The module file is created if a source file being compiled defines a Fortran module, which means, it uses the MODULE statement. Finally, the compiler optimizes the code and converts it in an executable program (\textit{.exe} in Windows).
+    In order to execute our program, we use the Intel\textregistered \hspace{0.1cm} Fortran Compiler which is in charge of translating the code to machine language. It works developing two sub processes. The first process verifies that the source code is well written (fulfilling all the syntactic and semantic Fortran rules) and once finished, it creates an intermediate code called \textbf{object code} (with extension \texttt{.obj} in Windows OS). The second sub process consists in linking the object code with other codes stored in libraries. The extensions used for this process are \texttt{.dll} for shareable library files and \texttt{.mod} for module files. The module file is created if a source file being compiled defines a Fortran module, which means, it uses the MODULE statement. Finally, the compiler optimizes the code and converts it in an executable program (\texttt{.exe} in Windows).
     
-    The \textit{.mod} files stores the interfaces of the modules that we have compiled, \textit{example.mod} contains the necessary information about the modules that have been defined in the program (\textit{example.f90}) and they are created with the \textit{.obj} file also, when compiling the project. Actually, a \textit{.mod} file is created for each module defined in our source (\textit{.f90}) file and a \textit{.obj} file will appear for the whole source code. The module interfaces share the name with the modules and the object file has the same name as the source file. We can define one module in each file and assign the same name to the module and the source file (it is not a requirement but it helps to organize everything). This can be broaden in \citep{mod1}, \citet{mod2} and \citep{mod3}. Regarding the history behind the file extensions of the source codes in Fortran, te information can be broaden in \citet{f90} or \citet{f902}.
+    The \texttt{.mod} files stores the interfaces of the modules that we have compiled, \texttt{example.mod} contains the necessary information about the modules that have been defined in the program (\texttt{example.f90}) and they are created with the \texttt{.obj} file also, when compiling the project. Actually, a \texttt{.mod} file is created for each module defined in our source (\texttt{.f90}) file and a \texttt{.obj} file will appear for the whole source code. The module interfaces share the name with the modules and the object file has the same name as the source file. We can define one module in each file and assign the same name to the module and the source file (it is not a requirement but it helps to organize everything). This can be broaden in \citep{mod1}, \citet{mod2} and \citep{mod3}. Regarding the history behind the file extensions of the source codes in Fortran, te information can be broaden in \citet{f90} or \citet{f902}.
 	    
-	Regarding the Visual Studio files, the kind of files are shared with all the projects and solutions of Visual Studio. The first important kind of document is \textit{.sln} which is the format where Visual stores our solution, the projects associated and some configuration. With this file, the Visual interface opens the projects associated. Together with the solution, it appears a configuration file with extension \textit{.suo} that has been previously described in the introduction of this guide.  
+	Regarding the Visual Studio files, the kind of files are shared with all the projects and solutions of Visual Studio. The first important kind of document is \texttt{.sln} which is the format where Visual stores our solution, the projects associated and some configuration. With this file, the Visual interface opens the projects associated. Together with the solution, it appears a configuration file with extension \texttt{.suo} that has been previously described in the introduction of this guide.  
     
-    Apart from these files, we can find folders with the different projects associated inside our solution folder. The file with extension \textit{.vfproj}, which makes reference to an Intel Fortran project file, stores everything needed to open the projects. More information about formats can be found in the official documentation of Intel Fortran Compiler \citep{format}, in the manual \citep{manual} or in \citep{format2}. Figure \ref{fig:Formats} summarises some of the extensions used.
+    Apart from these files, we can find folders with the different projects associated inside our solution folder. The file with extension \texttt{.vfproj}, which makes reference to an Intel Fortran project file, stores everything needed to open the projects. More information about formats can be found in the official documentation of Intel Fortran Compiler \citep{format}, in the manual \citep{manual} or in \citep{format2}. Figure \ref{fig:Formats} summarises some of the extensions used.
     
     \begin{figure}[h]
         \centering
