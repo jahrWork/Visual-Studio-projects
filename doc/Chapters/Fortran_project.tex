@@ -606,12 +606,18 @@ In this section some general concepts and good practices are going to be explain
         
         Take care of choosing a proper name for the library project (it will be the name of the \texttt{.lib} file), in this case let's use the same name as the module \texttt{ModuleExample.lib}.
         
-		\item Add to this Library project an empty source file called \texttt{ModuleExample1.f90} and paste the next example code, this will be the module code stored in our library:	
+		\item Add to this Library project an empty source file called 
+		
+		\texttt{ModuleExample1.f90} and paste the next example code, this will be the module code stored in our library:	
         
         \vspace{0.5cm}
         \lstinputlisting[language=Fortran, firstline=1, lastline=29]{Listing/ModuleExample.f90}		
 		
-		\item Then save all and set the library project as startup project (click with the right button on its name in the solution explorer and click on \textit{Set as StartUp Project}). Compile the file \texttt{ModuleExample.f90} and build the whole library project in the Release mode. Check that \texttt{ModuleExample.lib} and \texttt{ModuleExample.mod} appear in the Release folder of the project.
+		\item Then save all and set the library project as startup project (click with the right button on its name in the solution explorer 
+		and click on \textit{Set as StartUp Project}). 
+		
+		Compile the file \texttt{ModuleExample.f90} and build the whole library project in the Release mode. Check that 
+		\texttt{ModuleExample.lib} and \texttt{ModuleExample.mod} appear in the Release folder of the project.
         
 		\item Add to the main project both library files with the Solution Explorer in the \textbf{Source folder} using \textit{right click in the project name/Add/Existing Item.../} and looking for the files (see section \ref{sec:Include}).
         
